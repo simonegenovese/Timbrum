@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BA56D361C439CE300A2B36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA56D351C439CE300A2B36E /* AppDelegate.swift */; };
+		1BA56D381C439CE300A2B36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA56D371C439CE300A2B36E /* ViewController.swift */; };
+		1BA56D3B1C439CE300A2B36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA56D391C439CE300A2B36E /* Main.storyboard */; };
+		1BA56D3D1C439CE300A2B36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA56D3C1C439CE300A2B36E /* Assets.xcassets */; };
+		1BA56D401C439CE300A2B36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA56D3E1C439CE300A2B36E /* LaunchScreen.storyboard */; };
+		1BA56D4B1C439CE300A2B36E /* TimbrumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA56D4A1C439CE300A2B36E /* TimbrumTests.swift */; };
+		1BA56D561C439CE300A2B36E /* TimbrumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA56D551C439CE300A2B36E /* TimbrumUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BA56D471C439CE300A2B36E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA56D2A1C439CE300A2B36E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA56D311C439CE300A2B36E;
+			remoteInfo = Timbrum;
+		};
+		1BA56D521C439CE300A2B36E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA56D2A1C439CE300A2B36E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA56D311C439CE300A2B36E;
+			remoteInfo = Timbrum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BA56D321C439CE300A2B36E /* Timbrum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timbrum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA56D351C439CE300A2B36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1BA56D371C439CE300A2B36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BA56D3A1C439CE300A2B36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BA56D3C1C439CE300A2B36E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BA56D3F1C439CE300A2B36E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BA56D411C439CE300A2B36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA56D461C439CE300A2B36E /* TimbrumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimbrumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA56D4A1C439CE300A2B36E /* TimbrumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimbrumTests.swift; sourceTree = "<group>"; };
+		1BA56D4C1C439CE300A2B36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA56D511C439CE300A2B36E /* TimbrumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimbrumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA56D551C439CE300A2B36E /* TimbrumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimbrumUITests.swift; sourceTree = "<group>"; };
+		1BA56D571C439CE300A2B36E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BA56D2F1C439CE300A2B36E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA56D431C439CE300A2B36E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA56D4E1C439CE300A2B36E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BA56D291C439CE300A2B36E = {
+			isa = PBXGroup;
+			children = (
+				1BA56D341C439CE300A2B36E /* Timbrum */,
+				1BA56D491C439CE300A2B36E /* TimbrumTests */,
+				1BA56D541C439CE300A2B36E /* TimbrumUITests */,
+				1BA56D331C439CE300A2B36E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BA56D331C439CE300A2B36E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BA56D321C439CE300A2B36E /* Timbrum.app */,
+				1BA56D461C439CE300A2B36E /* TimbrumTests.xctest */,
+				1BA56D511C439CE300A2B36E /* TimbrumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BA56D341C439CE300A2B36E /* Timbrum */ = {
+			isa = PBXGroup;
+			children = (
+				1BA56D351C439CE300A2B36E /* AppDelegate.swift */,
+				1BA56D371C439CE300A2B36E /* ViewController.swift */,
+				1BA56D391C439CE300A2B36E /* Main.storyboard */,
+				1BA56D3C1C439CE300A2B36E /* Assets.xcassets */,
+				1BA56D3E1C439CE300A2B36E /* LaunchScreen.storyboard */,
+				1BA56D411C439CE300A2B36E /* Info.plist */,
+			);
+			path = Timbrum;
+			sourceTree = "<group>";
+		};
+		1BA56D491C439CE300A2B36E /* TimbrumTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BA56D4A1C439CE300A2B36E /* TimbrumTests.swift */,
+				1BA56D4C1C439CE300A2B36E /* Info.plist */,
+			);
+			path = TimbrumTests;
+			sourceTree = "<group>";
+		};
+		1BA56D541C439CE300A2B36E /* TimbrumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BA56D551C439CE300A2B36E /* TimbrumUITests.swift */,
+				1BA56D571C439CE300A2B36E /* Info.plist */,
+			);
+			path = TimbrumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BA56D311C439CE300A2B36E /* Timbrum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA56D5A1C439CE300A2B36E /* Build configuration list for PBXNativeTarget "Timbrum" */;
+			buildPhases = (
+				1BA56D2E1C439CE300A2B36E /* Sources */,
+				1BA56D2F1C439CE300A2B36E /* Frameworks */,
+				1BA56D301C439CE300A2B36E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Timbrum;
+			productName = Timbrum;
+			productReference = 1BA56D321C439CE300A2B36E /* Timbrum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BA56D451C439CE300A2B36E /* TimbrumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA56D5D1C439CE300A2B36E /* Build configuration list for PBXNativeTarget "TimbrumTests" */;
+			buildPhases = (
+				1BA56D421C439CE300A2B36E /* Sources */,
+				1BA56D431C439CE300A2B36E /* Frameworks */,
+				1BA56D441C439CE300A2B36E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BA56D481C439CE300A2B36E /* PBXTargetDependency */,
+			);
+			name = TimbrumTests;
+			productName = TimbrumTests;
+			productReference = 1BA56D461C439CE300A2B36E /* TimbrumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BA56D501C439CE300A2B36E /* TimbrumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA56D601C439CE300A2B36E /* Build configuration list for PBXNativeTarget "TimbrumUITests" */;
+			buildPhases = (
+				1BA56D4D1C439CE300A2B36E /* Sources */,
+				1BA56D4E1C439CE300A2B36E /* Frameworks */,
+				1BA56D4F1C439CE300A2B36E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BA56D531C439CE300A2B36E /* PBXTargetDependency */,
+			);
+			name = TimbrumUITests;
+			productName = TimbrumUITests;
+			productReference = 1BA56D511C439CE300A2B36E /* TimbrumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BA56D2A1C439CE300A2B36E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = ESTECO;
+				TargetAttributes = {
+					1BA56D311C439CE300A2B36E = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3ZV46J2CS4;
+					};
+					1BA56D451C439CE300A2B36E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 1BA56D311C439CE300A2B36E;
+					};
+					1BA56D501C439CE300A2B36E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 1BA56D311C439CE300A2B36E;
+					};
+				};
+			};
+			buildConfigurationList = 1BA56D2D1C439CE300A2B36E /* Build configuration list for PBXProject "Timbrum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BA56D291C439CE300A2B36E;
+			productRefGroup = 1BA56D331C439CE300A2B36E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BA56D311C439CE300A2B36E /* Timbrum */,
+				1BA56D451C439CE300A2B36E /* TimbrumTests */,
+				1BA56D501C439CE300A2B36E /* TimbrumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BA56D301C439CE300A2B36E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA56D401C439CE300A2B36E /* LaunchScreen.storyboard in Resources */,
+				1BA56D3D1C439CE300A2B36E /* Assets.xcassets in Resources */,
+				1BA56D3B1C439CE300A2B36E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA56D441C439CE300A2B36E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA56D4F1C439CE300A2B36E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BA56D2E1C439CE300A2B36E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA56D381C439CE300A2B36E /* ViewController.swift in Sources */,
+				1BA56D361C439CE300A2B36E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA56D421C439CE300A2B36E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA56D4B1C439CE300A2B36E /* TimbrumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA56D4D1C439CE300A2B36E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA56D561C439CE300A2B36E /* TimbrumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BA56D481C439CE300A2B36E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA56D311C439CE300A2B36E /* Timbrum */;
+			targetProxy = 1BA56D471C439CE300A2B36E /* PBXContainerItemProxy */;
+		};
+		1BA56D531C439CE300A2B36E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA56D311C439CE300A2B36E /* Timbrum */;
+			targetProxy = 1BA56D521C439CE300A2B36E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BA56D391C439CE300A2B36E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BA56D3A1C439CE300A2B36E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BA56D3E1C439CE300A2B36E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BA56D3F1C439CE300A2B36E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BA56D581C439CE300A2B36E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BA56D591C439CE300A2B36E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BA56D5B1C439CE300A2B36E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Timbrum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.esteco.Timbrum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1BA56D5C1C439CE300A2B36E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Timbrum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.esteco.Timbrum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1BA56D5E1C439CE300A2B36E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimbrumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.esteco.TimbrumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timbrum.app/Timbrum";
+			};
+			name = Debug;
+		};
+		1BA56D5F1C439CE300A2B36E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimbrumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.esteco.TimbrumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timbrum.app/Timbrum";
+			};
+			name = Release;
+		};
+		1BA56D611C439CE300A2B36E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TimbrumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.esteco.TimbrumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Timbrum;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1BA56D621C439CE300A2B36E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TimbrumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.esteco.TimbrumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Timbrum;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BA56D2D1C439CE300A2B36E /* Build configuration list for PBXProject "Timbrum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA56D581C439CE300A2B36E /* Debug */,
+				1BA56D591C439CE300A2B36E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BA56D5A1C439CE300A2B36E /* Build configuration list for PBXNativeTarget "Timbrum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA56D5B1C439CE300A2B36E /* Debug */,
+				1BA56D5C1C439CE300A2B36E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1BA56D5D1C439CE300A2B36E /* Build configuration list for PBXNativeTarget "TimbrumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA56D5E1C439CE300A2B36E /* Debug */,
+				1BA56D5F1C439CE300A2B36E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1BA56D601C439CE300A2B36E /* Build configuration list for PBXNativeTarget "TimbrumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA56D611C439CE300A2B36E /* Debug */,
+				1BA56D621C439CE300A2B36E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BA56D2A1C439CE300A2B36E /* Project object */;
+}
