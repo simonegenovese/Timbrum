@@ -487,6 +487,7 @@
 				1BA56D5C1C439CE300A2B36E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BA56D5D1C439CE300A2B36E /* Build configuration list for PBXNativeTarget "TimbrumTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				1BA56D5F1C439CE300A2B36E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BA56D601C439CE300A2B36E /* Build configuration list for PBXNativeTarget "TimbrumUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				1BA56D621C439CE300A2B36E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
