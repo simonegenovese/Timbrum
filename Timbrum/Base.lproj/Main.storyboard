@@ -22,7 +22,7 @@
                                 <rect key="frame" x="340" y="28" width="240" height="213"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="exit32.png" maximumValueImage="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" minimumValueImage="exit32.png" maximumValueImage="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
                                 <rect key="frame" x="18" y="278" width="564" height="32"/>
                                 <connections>
                                     <action selector="logEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="z8r-l9-bVr"/>

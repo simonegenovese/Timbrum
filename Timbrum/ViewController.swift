@@ -22,8 +22,12 @@ class ViewController: UIViewController {
 
     @IBAction func logEvent(sender: UISlider) {
         let value = sender.value
-        print("value = \(value)")
+        checkSlider(value)
     }
 
+    func checkSlider(value: Float) -> Double {
+        print("value = \(value)")
+        return Double(value)
+    }
 }
 

@@ -22,6 +22,10 @@ class TimbrumTests: XCTestCase {
     }
     
     func testExample() {
+        let viewController = ViewController()
+        let result = viewController.checkSlider(0.1)
+        XCTAssert(result==0.0)
+       
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
