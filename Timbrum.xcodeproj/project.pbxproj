@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0D212B1C7D8AA800EB1CB3 /* enter32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0D21291C7D8AA800EB1CB3 /* enter32.png */; };
+		1B0D212C1C7D8AA800EB1CB3 /* exit32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0D212A1C7D8AA800EB1CB3 /* exit32.png */; };
 		1B9172701C7CDC91000838FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91726F1C7CDC91000838FD /* AppDelegate.swift */; };
 		1B9172721C7CDC91000838FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9172711C7CDC91000838FD /* ViewController.swift */; };
 		1B9172751C7CDC91000838FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9172731C7CDC91000838FD /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0D21291C7D8AA800EB1CB3 /* enter32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enter32.png; sourceTree = "<group>"; };
+		1B0D212A1C7D8AA800EB1CB3 /* exit32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit32.png; sourceTree = "<group>"; };
 		1B91726C1C7CDC91000838FD /* Timbrum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timbrum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B91726F1C7CDC91000838FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B9172711C7CDC91000838FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		1B91729D1C7CDCD6000838FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1B0D21291C7D8AA800EB1CB3 /* enter32.png */,
+				1B0D212A1C7D8AA800EB1CB3 /* exit32.png */,
 				1B91727B1C7CDC91000838FD /* Info.plist */,
 				1B9172761C7CDC91000838FD /* Assets.xcassets */,
 				1B9172781C7CDC91000838FD /* LaunchScreen.storyboard */,
@@ -240,6 +246,8 @@
 				1B91727A1C7CDC91000838FD /* LaunchScreen.storyboard in Resources */,
 				1B9172771C7CDC91000838FD /* Assets.xcassets in Resources */,
 				1B9172751C7CDC91000838FD /* Main.storyboard in Resources */,
+				1B0D212B1C7D8AA800EB1CB3 /* enter32.png in Resources */,
+				1B0D212C1C7D8AA800EB1CB3 /* exit32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +500,7 @@
 				1B9172961C7CDC91000838FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B9172971C7CDC91000838FD /* Build configuration list for PBXNativeTarget "TimbrumTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				1B9172991C7CDC91000838FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B91729A1C7CDC91000838FD /* Build configuration list for PBXNativeTarget "TimbrumUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +518,7 @@
 				1B91729C1C7CDC91000838FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

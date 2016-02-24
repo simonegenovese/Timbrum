@@ -18,28 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
-                                <rect key="frame" x="18" y="278" width="564" height="31"/>
-                                <connections>
-                                    <action selector="logEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="z8r-l9-bVr"/>
-                                </connections>
-                            </slider>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-2y-EL6">
                                 <rect key="frame" x="340" y="28" width="240" height="213"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-fr-sDf">
-                                <rect key="frame" x="20" y="249" width="41" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX7-Bm-xen">
-                                <rect key="frame" x="552" y="249" width="28" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="exit32.png" maximumValueImage="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
+                                <rect key="frame" x="18" y="278" width="564" height="32"/>
+                                <connections>
+                                    <action selector="logEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="z8r-l9-bVr"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -58,4 +46,8 @@
             <point key="canvasLocation" x="329" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="enter32.png" width="32" height="32"/>
+        <image name="exit32.png" width="32" height="32"/>
+    </resources>
 </document>
