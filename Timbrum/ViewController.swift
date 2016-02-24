@@ -2,14 +2,14 @@
 //  ViewController.swift
 //  Timbrum
 //
-//  Created by Simone Genovese on 11/01/16.
+//  Created by Simone Genovese on 23/02/16.
 //  Copyright © 2016 ESTECO. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func logEvent(sender: UISlider) {
+        let value = sender.value
+        print("value = \(value)")
+    }
 
 }
 
