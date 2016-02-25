@@ -21,13 +21,22 @@ class TimbrumTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testReturnValueIsZeroIfSliderIsNotOne() {
         let viewController = ViewController()
         let result = viewController.checkSlider(0.1)
+        XCTAssert(result==0.5)
+    }
+    
+    func testReturnOneIfSlidePositionIsOne() {
+        let viewController = ViewController()
+        let result = viewController.checkSlider(1.0)
+        XCTAssert(result==1.0)
+    }
+    
+    func testReturnMinusOneIfSlidePositionIsMinusOne() {
+        let viewController = ViewController()
+        let result = viewController.checkSlider(0.0)
         XCTAssert(result==0.0)
-       
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {

@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +23,18 @@ class ViewController: UIViewController {
 
     @IBAction func logEvent(sender: UISlider) {
         let value = sender.value
-        checkSlider(value)
+        let newPosition = checkSlider(value)
+        slider.setValue(Float(newPosition), animated: true)
     }
 
     func checkSlider(value: Float) -> Double {
         print("value = \(value)")
-        return Double(value)
+        var sliderPosition:Double = 0.5
+        if value == 1 || value == (0.0) {
+            sliderPosition = Double(value)
+            print("Hai Timbrato = \(value)")
+        }
+        return sliderPosition
     }
 }
 

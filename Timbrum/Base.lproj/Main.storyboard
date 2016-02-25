@@ -40,6 +40,9 @@
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="37" id="cpy-8N-V8B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="6F7-ju-Go8" id="4SC-bn-WFI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
