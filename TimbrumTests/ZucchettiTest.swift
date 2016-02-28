@@ -9,7 +9,7 @@
 import XCTest
 @testable import Timbrum
 
-class TimbrumTests: XCTestCase {
+class ZucchettiTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,21 +22,9 @@ class TimbrumTests: XCTestCase {
     }
     
     func testReturnValueIsZeroIfSliderIsNotOne() {
-        let viewController = ViewController()
-        let result = viewController.checkSlider(0.1)
-        XCTAssert(result==0.5)
-    }
-    
-    func testReturnOneIfSlidePositionIsOne() {
-        let viewController = ViewController()
-        let result = viewController.checkSlider(1.0)
-        XCTAssert(result==1.0)
-    }
-    
-    func testReturnMinusOneIfSlidePositionIsMinusOne() {
-        let viewController = ViewController()
-        let result = viewController.checkSlider(0.0)
-        XCTAssert(result==0.0)
+        let zucchettiController = ZucchettiController()
+        let html = zucchettiController.data_request("http://www.google.it")
+        XCTAssertEqual(NSString(string: ""), html)
     }
     
     
