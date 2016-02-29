@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ZucchettiListener {
+    @IBOutlet var slider: UISlider!
+    @IBOutlet var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,25 @@ class ViewController: UIViewController {
 
     @IBAction func logEvent(sender: UISlider) {
         let value = sender.value
-        print("value = \(value)")
+        let newPosition = checkSlider(value)
+        slider.setValue(Float(newPosition), animated: true)
     }
 
+    func checkSlider(value: Float) -> Double {
+        print("value = \(value)")
+        var sliderPosition:Double = 0.5
+        if value == 1 || value == (0.0) {
+            sliderPosition = Double(value)
+            print("Hai Timbrato = \(value)")
+            let zucchetti = ZucchettiController()
+            zucchetti.data_request("http://www.google.it", listener: self)
+          
+        }
+        return sliderPosition
+    }
+    
+    func loadComplete(data: NSData){
+          webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
+    }
 }
 

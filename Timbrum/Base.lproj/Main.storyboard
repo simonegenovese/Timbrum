@@ -18,28 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-2y-EL6">
-                                <rect key="frame" x="340" y="28" width="240" height="213"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="exit32.png" maximumValueImage="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" minimumValueImage="exit32.png" maximumValueImage="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
                                 <rect key="frame" x="18" y="278" width="564" height="32"/>
                                 <connections>
                                     <action selector="logEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="z8r-l9-bVr"/>
                                 </connections>
                             </slider>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-2y-EL6">
+                                <rect key="frame" x="298" y="28" width="240" height="213"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="258" id="95r-cw-rve"/>
                             <constraint firstAttribute="leadingMargin" secondItem="6F7-ju-Go8" secondAttribute="leading" id="KAG-IK-Z4M"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6F7-ju-Go8" secondAttribute="trailing" id="KE0-2m-IVm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="M3Q-2y-EL6" secondAttribute="trailing" id="KN8-g7-mI1"/>
-                            <constraint firstItem="M3Q-2y-EL6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="320" id="Nww-8U-NJk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M3Q-2y-EL6" secondAttribute="trailing" constant="42" id="KN8-g7-mI1"/>
+                            <constraint firstItem="M3Q-2y-EL6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="278" id="Nww-8U-NJk"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WgN-Wy-aGh"/>
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="37" id="cpy-8N-V8B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="6F7-ju-Go8" id="4SC-bn-WFI"/>
+                        <outlet property="webView" destination="M3Q-2y-EL6" id="q2c-EW-14U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
