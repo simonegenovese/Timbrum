@@ -15,6 +15,13 @@ class ZucchettiController {
         let session = NSURLSession(configuration: config)
         let url = NSURL(string: url_to_request)
         let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        let dataString = "m_cUserName=demo&m_cPassword=demo&m_cAction=login"
+        let data = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        
+        request.HTTPBody = data
+        
+        
         let dataTask = session.dataTaskWithRequest(request) {(data, response, error) in
             if error != nil {
                 print(error)

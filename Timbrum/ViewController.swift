@@ -35,7 +35,7 @@ class ViewController: UIViewController, ZucchettiListener {
             sliderPosition = Double(value)
             print("Hai Timbrato = \(value)")
             let zucchetti = ZucchettiController()
-            zucchetti.data_request("http://www.google.it", listener: self)
+            zucchetti.data_request("http://zucchetti.toshiro.it/app_dev.php", listener: self)
           
         }
         return sliderPosition
