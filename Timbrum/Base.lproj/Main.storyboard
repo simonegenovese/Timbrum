@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,25 +31,13 @@
                                     <constraint firstAttribute="height" constant="280" id="dLk-ZU-2tE"/>
                                 </constraints>
                             </webView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-p4-SIc">
-                                <rect key="frame" x="20" y="28" width="560" height="225"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="225" id="5kt-ew-bze"/>
-                                    <constraint firstAttribute="width" constant="560" id="m4e-xZ-gfL"/>
-                                    <constraint firstAttribute="width" secondItem="w0S-p4-SIc" secondAttribute="height" multiplier="112:45" id="sdI-yp-d7R"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6F7-ju-Go8" firstAttribute="leading" secondItem="w0S-p4-SIc" secondAttribute="leading" id="IHZ-Jy-ePY"/>
                             <constraint firstAttribute="bottom" secondItem="6F7-ju-Go8" secondAttribute="bottom" constant="20" symbolic="YES" id="IQ1-B9-zqg"/>
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="8" symbolic="YES" id="JFY-dm-DrV"/>
-                            <constraint firstItem="6F7-ju-Go8" firstAttribute="trailing" secondItem="w0S-p4-SIc" secondAttribute="trailing" id="MBh-Db-BJg"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="trailing" secondItem="6F7-ju-Go8" secondAttribute="trailing" id="QHY-92-fCW"/>
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aUj-Xp-NwC"/>
-                            <constraint firstItem="w0S-p4-SIc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fJP-YQ-vDn"/>
-                            <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="w0S-p4-SIc" secondAttribute="bottom" constant="8" symbolic="YES" id="jSE-T4-stu"/>
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uWq-Hq-kn5"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="leading" secondItem="6F7-ju-Go8" secondAttribute="leading" id="xsE-Cr-ciB"/>
                         </constraints>
