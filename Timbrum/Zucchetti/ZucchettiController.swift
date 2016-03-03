@@ -31,6 +31,14 @@ class ZucchettiController {
         executeRequest("\(zucchettiServer)/servlet/ushp_ftimbrus", requestParam: "verso=U")
     }
 
+    func loadAccessLog() {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let today = NSDate()
+        let enterDate = dateFormatter.stringFromDate(today)
+        executeRequest("\(zucchettiServer)/servlet/SQLDataProviderServer", requestParam: "rows=10&startrow=0&count=true&cmdhash=49189db8b0d3c1ee6c2b37ef5dbd803&sqlcmd=rows%%3Aushp_fgettimbrus&pDATE=\(enterDate)")
+    }
+
     func executeRequest(url_to_request: String, requestParam: String) {
         let url = NSURL(string: url_to_request)
         let request = NSMutableURLRequest(URL: url!)

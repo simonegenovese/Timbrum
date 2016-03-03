@@ -10,10 +10,14 @@ import XCTest
 @testable import Timbrum
 
 class ZucchettiTests: XCTestCase {
+    let zucchettiController = ZucchettiController()
+    let listener = StubListener()
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        zucchettiController.addListener(listener)
+        zucchettiController.connect("http://zucchetti.toshiro.it/app_dev.php")
+        sleep(4)
     }
 
     override func tearDown() {
@@ -21,25 +25,32 @@ class ZucchettiTests: XCTestCase {
         super.tearDown()
     }
 
-    func testReturnValueIsZeroIfSliderIsNotOne() {
-        let zucchettiController = ZucchettiController()
-        let listener = StubListener()
-        zucchettiController.addListener(listener)
-        zucchettiController.connect("http://zucchetti.toshiro.it/app_dev.php")
-        sleep(4)
+    func testZucchettiConnect() {
         let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
         XCTAssertTrue(resstr!.containsString("<title>Symfony - Welcome</title>"))
-
     }
 
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testZucchettiEnter() {
+        zucchettiController.enter()
+        sleep(4)
+        let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
+        XCTAssertEqual("Ricevuta timbratura: E\n", resstr)
     }
 
+    func testZucchettiExit() {
+        zucchettiController.exit()
+        sleep(4)
+        let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
+        XCTAssertEqual("Ricevuta timbratura: U\n", resstr)
+    }
+    
+    func testZucchettiLog() {
+        zucchettiController.loadAccessLog()
+        sleep(4)
+        let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
+        XCTAssertTrue(resstr!.containsString("\"Fields\":[\"DAYSTAMP\",\"TIMETIMBR\",\"DIRTIMBR\",\"CAUSETIMBR\",\"TYPETIMBR\",\"IPTIMBR\"]"))
+    }
+    
     class StubListener: ZucchettiListener {
 
         var globalData: NSData = NSData()

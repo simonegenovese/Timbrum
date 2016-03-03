@@ -41,11 +41,13 @@ class ViewController: UIViewController, ZucchettiListener {
             sliderPosition = Double(value)
             print("Hai Timbrato Entrata= \(value)")
             zucchetti.enter()
-        }
-        if value == USCITA {
+        } else if value == USCITA {
             sliderPosition = Double(value)
             print("Hai Timbrato Uscita = \(value)")
             zucchetti.exit()
+        } else {
+            print("Refresh")
+            zucchetti.loadAccessLog()
         }
         return sliderPosition
     }
