@@ -10,17 +10,17 @@ import XCTest
 @testable import Timbrum
 
 class ZucchettiTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testReturnValueIsZeroIfSliderIsNotOne() {
         let zucchettiController = ZucchettiController()
         let listener = StubListener()
@@ -31,27 +31,26 @@ class ZucchettiTests: XCTestCase {
         XCTAssertTrue(resstr!.containsString("<title>Symfony - Welcome</title>"))
 
     }
-    
-    
-    
+
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
-    
-    class StubListener: ZucchettiListener{
-        
+
+    class StubListener: ZucchettiListener {
+
         var globalData: NSData = NSData()
-        
-        func loadComplete(data: NSData){
+
+        func loadComplete(data: NSData) {
             globalData = data
         }
-        
-        func getData() ->NSData{
-        return globalData
+
+        func getData() -> NSData {
+            return globalData
         }
     }
-    
+
 }
