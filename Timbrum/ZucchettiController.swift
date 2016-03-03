@@ -20,7 +20,15 @@ class ZucchettiController {
     
     func connect(url_to_request: String ) {
         zucchettiServer = url_to_request
-        executeRequest(zucchettiServer,requestParam: "m_cUserName=demo&m_cPassword=demo&m_cAction=login")
+        executeRequest("\(zucchettiServer)/servlet/cp_login",requestParam: "m_cUserName=demo&m_cPassword=demo&m_cAction=login")
+    }
+    
+    func enter() {
+        executeRequest("\(zucchettiServer)/servlet/ushp_ftimbrus",requestParam: "verso=E")
+    }
+    
+    func exit() {
+        executeRequest("\(zucchettiServer)/servlet/ushp_ftimbrus",requestParam: "verso=U")
     }
     
     func executeRequest(url_to_request: String,requestParam: String){
