@@ -13,8 +13,9 @@ class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var webView: UIWebView!
     let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
     var zucchetti = ZucchettiController()
+    let ENTRATA: NSNumber = 1.0
+    let USCITA: NSNumber = 0.0
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Connect to Zucchetti
@@ -35,17 +36,22 @@ class ViewController: UIViewController, ZucchettiListener {
 
     func checkSlider(value: Float) -> Double {
         print("value = \(value)")
-        var sliderPosition:Double = 0.5
-        if value == 1 || value == (0.0) {
+        var sliderPosition: Double = 0.5
+        if value == ENTRATA {
             sliderPosition = Double(value)
-            print("Hai Timbrato = \(value)")
-            
+            print("Hai Timbrato Entrata= \(value)")
+            zucchetti.enter()
+        }
+        if value == USCITA {
+            sliderPosition = Double(value)
+            print("Hai Timbrato Uscita = \(value)")
+            zucchetti.exit()
         }
         return sliderPosition
     }
-    
-    func loadComplete(data: NSData){
-          webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
+
+    func loadComplete(data: NSData) {
+        webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
     }
 }
 

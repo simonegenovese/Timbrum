@@ -8,8 +8,8 @@
 
 import Foundation
 
-class NullZucchettiListener:ZucchettiListener{
-    func loadComplete(data: NSData){
+class NullZucchettiListener: ZucchettiListener {
+    func loadComplete(data: NSData) {
         let resstr = NSString(data: data, encoding: NSUTF8StringEncoding)
         print(resstr)
     }
