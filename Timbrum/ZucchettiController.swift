@@ -9,18 +9,35 @@
 import Foundation
 
 class ZucchettiController {
+
+    var zucchettiServer = "http://zucchetti.toshiro.it/app_dev.php"
+    let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+    var zucchettiListener : ZucchettiListener = NullZucchettiListener()
     
-    func data_request(url_to_request: String, listener: ZucchettiListener) {
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: config)
-        let url = NSURL(string: url_to_request)
+    func addListener(listener: ZucchettiListener){
+        zucchettiListener = listener
+    }
+    
+    func connect(url_to_request: String ) {
+        zucchettiServer = url_to_request
+        executeRequest("\(zucchettiServer)/servlet/cp_login",requestParam: "m_cUserName=demo&m_cPassword=demo&m_cAction=login")
+    }
+    
+    func enter() {
+        executeRequest("\(zucchettiServer)/servlet/ushp_ftimbrus",requestParam: "verso=E")
+    }
+    
+    func exit() {
+        executeRequest("\(zucchettiServer)/servlet/ushp_ftimbrus",requestParam: "verso=U")
+    }
+    
+    func executeRequest(url_to_request: String,requestParam: String){
+        let url = NSURL(string: zucchettiServer)
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
-        let dataString = "m_cUserName=demo&m_cPassword=demo&m_cAction=login"
-        let data = (dataString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        let data = (requestParam as NSString).dataUsingEncoding(NSUTF8StringEncoding)
         
         request.HTTPBody = data
-        
         
         let dataTask = session.dataTaskWithRequest(request) {(data, response, error) in
             if error != nil {
@@ -30,12 +47,10 @@ class ZucchettiController {
                 // data has a length of 2523 - the contents at the url
                 if let httpRes = response as? NSHTTPURLResponse {
                     print(httpRes)
-                    listener.loadComplete(data!)
+                    self.zucchettiListener.loadComplete(data!)
                 }
             }
         }
         dataTask.resume()
     }
-    
-
 }
