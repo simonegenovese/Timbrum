@@ -48,6 +48,7 @@ class ZucchettiTests: XCTestCase {
         zucchettiController.loadAccessLog()
         sleep(4)
         let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
+        print(resstr)
         XCTAssertTrue(resstr!.containsString("\"Fields\":[\"DAYSTAMP\",\"TIMETIMBR\",\"DIRTIMBR\",\"CAUSETIMBR\",\"TYPETIMBR\",\"IPTIMBR\"]"))
     }
     

@@ -23,7 +23,7 @@ class ZucchettiParserTests: XCTestCase {
 
     func testParseData(){
         let parser = ZucchettiParser()
-        let stringData: NSString = NSString(string: "esempio dati che arrivano dal server")
+        let stringData = "{\"Data\":[[\"2016-03-03\",\"21:17:19\",\"E\",\"\",\"\",\"\"],[\"2016-03-03\",\"21:17:27\",\"U\",\"\",\"\",\"\"],\"tf,CCCCCC,2\"],\"Fields\":[\"DAYSTAMP\",\"TIMETIMBR\",\"DIRTIMBR\",\"CAUSETIMBR\",\"TYPETIMBR\",\"IPTIMBR\"]}"
         let data = stringData.dataUsingEncoding(NSUTF8StringEncoding)
         let result = parser.parse(data!)
         XCTAssertEqual("4.30", result)
