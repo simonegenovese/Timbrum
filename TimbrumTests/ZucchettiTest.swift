@@ -23,15 +23,33 @@ class ZucchettiTests: XCTestCase {
     
     func testReturnValueIsZeroIfSliderIsNotOne() {
         let zucchettiController = ZucchettiController()
-        let html = zucchettiController.data_request("http://www.google.it")
-        XCTAssertEqual(NSString(string: ""), html)
+        let listener = StubListener()
+        zucchettiController.data_request("http://zucchetti.toshiro.it/app_dev.php", listener: listener)
+        sleep(4)
+        let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
+        XCTAssertTrue(resstr!.containsString("<title>Symfony - Welcome</title>"))
+
     }
+    
     
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
             // Put the code you want to measure the time of here.
+        }
+    }
+    
+    class StubListener: ZucchettiListener{
+        
+        var globalData: NSData = NSData()
+        
+        func loadComplete(data: NSData){
+            globalData = data
+        }
+        
+        func getData() ->NSData{
+        return globalData
         }
     }
     

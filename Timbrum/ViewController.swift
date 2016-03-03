@@ -11,10 +11,15 @@ import UIKit
 class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
+    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
+    var zucchetti = ZucchettiController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Connect to Zucchetti
+        zucchetti.addListener(self)
+        zucchetti.connect(ZUCCHETTI_SERVER)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,9 +39,7 @@ class ViewController: UIViewController, ZucchettiListener {
         if value == 1 || value == (0.0) {
             sliderPosition = Double(value)
             print("Hai Timbrato = \(value)")
-            let zucchetti = ZucchettiController()
-            zucchetti.data_request("http://zucchetti.toshiro.it/app_dev.php", listener: self)
-          
+            
         }
         return sliderPosition
     }

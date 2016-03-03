@@ -17,6 +17,7 @@
 		1B9172851C7CDC91000838FD /* TimbrumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9172841C7CDC91000838FD /* TimbrumTests.swift */; };
 		1B9172901C7CDC91000838FD /* TimbrumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91728F1C7CDC91000838FD /* TimbrumUITests.swift */; };
 		1BCEDE351C836B370053E3F0 /* ZucchettiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEDE341C836B370053E3F0 /* ZucchettiListener.swift */; };
+		1BD5ED0A1C8799BC004FDAFF /* NullZucchettiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD5ED091C8799BC004FDAFF /* NullZucchettiListener.swift */; };
 		1BE12BAA1C7ED66300415344 /* ZucchettiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE12BA91C7ED66300415344 /* ZucchettiController.swift */; };
 		1BE12BAC1C7ED9F300415344 /* ZucchettiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE12BAB1C7ED9F300415344 /* ZucchettiTest.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		1B91728F1C7CDC91000838FD /* TimbrumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimbrumUITests.swift; sourceTree = "<group>"; };
 		1B9172911C7CDC91000838FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BCEDE341C836B370053E3F0 /* ZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiListener.swift; sourceTree = "<group>"; };
+		1BD5ED091C8799BC004FDAFF /* NullZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullZucchettiListener.swift; sourceTree = "<group>"; };
 		1BE12BA91C7ED66300415344 /* ZucchettiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiController.swift; sourceTree = "<group>"; };
 		1BE12BAB1C7ED9F300415344 /* ZucchettiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				1B9172731C7CDC91000838FD /* Main.storyboard */,
 				1BE12BA91C7ED66300415344 /* ZucchettiController.swift */,
 				1BCEDE341C836B370053E3F0 /* ZucchettiListener.swift */,
+				1BD5ED091C8799BC004FDAFF /* NullZucchettiListener.swift */,
 			);
 			path = Timbrum;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				1BCEDE351C836B370053E3F0 /* ZucchettiListener.swift in Sources */,
 				1B9172701C7CDC91000838FD /* AppDelegate.swift in Sources */,
 				1BE12BAA1C7ED66300415344 /* ZucchettiController.swift in Sources */,
+				1BD5ED0A1C8799BC004FDAFF /* NullZucchettiListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
