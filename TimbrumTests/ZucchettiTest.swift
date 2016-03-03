@@ -24,7 +24,8 @@ class ZucchettiTests: XCTestCase {
     func testReturnValueIsZeroIfSliderIsNotOne() {
         let zucchettiController = ZucchettiController()
         let listener = StubListener()
-        zucchettiController.data_request("http://zucchetti.toshiro.it/app_dev.php", listener: listener)
+        zucchettiController.addListener(listener)
+        zucchettiController.connect("http://zucchetti.toshiro.it/app_dev.php")
         sleep(4)
         let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
         XCTAssertTrue(resstr!.containsString("<title>Symfony - Welcome</title>"))
