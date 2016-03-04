@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
-    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
-//    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
+//    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
+    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
 
     var zucchetti = ZucchettiController()
     let ENTRATA: NSNumber = 1.0

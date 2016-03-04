@@ -9,9 +9,9 @@
 import Foundation
 
 class ZucchettiParser {
-    
-    func parse(data:NSData)->String{
-        let datastring = NSString(data:data, encoding:NSUTF8StringEncoding) as! String
+
+    func parse(data: NSData) -> String {
+        let datastring = NSString(data: data, encoding: NSUTF8StringEncoding) as! String
         // Parse data..
         return datastring
     }
