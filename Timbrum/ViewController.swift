@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
-    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
+    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
+//    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
+
     var zucchetti = ZucchettiController()
     let ENTRATA: NSNumber = 1.0
     let USCITA: NSNumber = 0.0
@@ -41,17 +43,21 @@ class ViewController: UIViewController, ZucchettiListener {
             sliderPosition = Double(value)
             print("Hai Timbrato Entrata= \(value)")
             zucchetti.enter()
-        }
-        if value == USCITA {
+        } else if value == USCITA {
             sliderPosition = Double(value)
             print("Hai Timbrato Uscita = \(value)")
             zucchetti.exit()
+        } else {
+            print("Refresh")
+            zucchetti.loadAccessLog()
         }
         return sliderPosition
     }
 
     func loadComplete(data: NSData) {
         webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
+//        let parser = ZucchettiParser()
+//        let time = parser.parse(data)
     }
 }
 
