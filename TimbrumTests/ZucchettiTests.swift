@@ -43,7 +43,7 @@ class ZucchettiTests: XCTestCase {
         let resstr = NSString(data: listener.getData(), encoding: NSUTF8StringEncoding)
         XCTAssertEqual("Ricevuta timbratura: U\n", resstr)
     }
-    
+
     func testZucchettiLog() {
         zucchettiController.loadAccessLog()
         sleep(4)
@@ -51,7 +51,7 @@ class ZucchettiTests: XCTestCase {
         print(resstr)
         XCTAssertTrue(resstr!.containsString("\"Fields\":[\"DAYSTAMP\",\"TIMETIMBR\",\"DIRTIMBR\",\"CAUSETIMBR\",\"TYPETIMBR\",\"IPTIMBR\"]"))
     }
-    
+
     class StubListener: ZucchettiListener {
 
         var globalData: NSData = NSData()

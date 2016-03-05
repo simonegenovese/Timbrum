@@ -36,7 +36,8 @@ class ZucchettiController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let today = NSDate()
         let enterDate = dateFormatter.stringFromDate(today)
-        executeRequest("\(zucchettiServer)/servlet/SQLDataProviderServer", requestParam: "rows=10&startrow=0&count=true&cmdhash=49189db8b0d3c1ee6c2b37ef5dbd803&sqlcmd=rows%%3Aushp_fgettimbrus&pDATE=\(enterDate)")
+        let request = "rows=16&startrow=0&count=false&cmdhash=7307015ecef178a88c60a36b1d82e67b&sqlcmd=ushp_qtimbrus&ADATE=\(enterDate)"
+        executeRequest("\(zucchettiServer)/servlet/SQLDataProviderServer", requestParam: request)
     }
 
     func executeRequest(url_to_request: String, requestParam: String) {

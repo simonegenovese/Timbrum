@@ -125,9 +125,6 @@
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uWq-Hq-kn5"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="leading" secondItem="6F7-ju-Go8" secondAttribute="leading" id="xsE-Cr-ciB"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="23o-Eq-Vkf" appends="YES" id="UAL-Ud-dKy"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="slider" destination="6F7-ju-Go8" id="4SC-bn-WFI"/>
@@ -135,7 +132,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer delaysTouchesBegan="YES" minimumNumberOfTouches="1" id="23o-Eq-Vkf"/>
             </objects>
             <point key="canvasLocation" x="179" y="-318"/>
         </scene>
