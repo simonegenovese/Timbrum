@@ -56,8 +56,9 @@ class ViewController: UIViewController, ZucchettiListener {
 
     func loadComplete(data: NSData) {
         webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
-//        let parser = ZucchettiParser()
-//        let time = parser.parse(data)
+        let parser = ZucchettiParser()
+        parser.parse(data)
+        
     }
 }
 
