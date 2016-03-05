@@ -9,23 +9,38 @@
 import Foundation
 
 class ZucchettiParser {
+    var count = TimeCounter()
 
     func parse(data: NSData) -> String {
-//        let datastring = NSString(data: data, encoding: NSUTF8StringEncoding) as! String
         var datastring: String = ""
         var jsonResult: NSDictionary
         do {
             jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
-            print(jsonResult)
-            let jsonData = jsonResult["Data"]
-            let dataIngresso = jsonData![0][0]
-            let oraIngresso = jsonData![0][1]
-            datastring = "Data: \(dataIngresso) Ora: \(oraIngresso)"
-            print(datastring)
+            let jsonData = jsonResult["Data"] as! NSArray
+            for row in jsonData  {
+                if row is NSArray {
+                    if String("E")==(row[2] as! String) {
+                        count.sum(row[1] as! String)
+                    } else{
+                        count.remove(row[1] as! String)
+                    }
+                }
+                else {
+                    // obj is not an Array
+                }
+            }
+            let dataIngresso = jsonData[0][0]
+            let oraIngresso = jsonData[0][1]
+            datastring = "Data"
+            print("Data: \(dataIngresso) Ora: \(oraIngresso)")
         } catch {
             // In questo caso non ci sono risposte JSON ma html
             print(error)
         }
         return datastring
+    }
+    
+    func getOreTotali() -> String {
+        return count.getOreTotali()
     }
 }
