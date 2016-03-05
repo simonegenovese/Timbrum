@@ -17,7 +17,13 @@ class ZucchettiParser {
         do {
             jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
             print(jsonResult)
+            let jsonData = jsonResult["Data"]
+            let dataIngresso = jsonData![0][0]
+            let oraIngresso = jsonData![0][1]
+            datastring = "Data: \(dataIngresso) Ora: \(oraIngresso)"
+            print(datastring)
         } catch {
+            // In questo caso non ci sono risposte JSON ma html
             print(error)
         }
         return datastring
