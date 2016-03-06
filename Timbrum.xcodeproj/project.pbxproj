@@ -23,6 +23,7 @@
 		734BE50D00DAAC1CC7D3485E /* NullZucchettiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BECA55DB8E39C306F18F5 /* NullZucchettiListener.swift */; };
 		734BE6DDF4B9B75DB02448DB /* ZucchettiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BE6848E7C5173B5EA7EC6 /* ZucchettiController.swift */; };
 		734BED7600EE7D6EA60D912A /* ZucchettiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BE7412B636352748B04F8 /* ZucchettiListener.swift */; };
+		8B11EBC41C8CB4CF0030F5A6 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B11EBC31C8CB4CF0030F5A6 /* gear.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		734BE6848E7C5173B5EA7EC6 /* ZucchettiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiController.swift; sourceTree = "<group>"; };
 		734BE7412B636352748B04F8 /* ZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiListener.swift; sourceTree = "<group>"; };
 		734BECA55DB8E39C306F18F5 /* NullZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullZucchettiListener.swift; sourceTree = "<group>"; };
+		8B11EBC31C8CB4CF0030F5A6 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = ../../../../Desktop/gear.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0D21291C7D8AA800EB1CB3 /* enter32.png */,
+				8B11EBC31C8CB4CF0030F5A6 /* gear.png */,
 				1B0D212A1C7D8AA800EB1CB3 /* exit32.png */,
 				1B91727B1C7CDC91000838FD /* Info.plist */,
 				1B9172761C7CDC91000838FD /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 			files = (
 				1B91727A1C7CDC91000838FD /* LaunchScreen.storyboard in Resources */,
 				1B9172771C7CDC91000838FD /* Assets.xcassets in Resources */,
+				8B11EBC41C8CB4CF0030F5A6 /* gear.png in Resources */,
 				1B9172751C7CDC91000838FD /* Main.storyboard in Resources */,
 				1B0D212B1C7D8AA800EB1CB3 /* enter32.png in Resources */,
 				1B0D212C1C7D8AA800EB1CB3 /* exit32.png in Resources */,

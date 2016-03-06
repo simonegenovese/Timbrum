@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-1E-nJS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gear.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-1E-nJS">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="enter32.png" width="32" height="32"/>
+        <image name="gear.png" width="594" height="601"/>
     </resources>
 </document>
