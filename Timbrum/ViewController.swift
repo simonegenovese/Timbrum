@@ -110,7 +110,7 @@ class ViewController: UIViewController, ZucchettiListener {
         
         //il metodo presentViewController ci consente di passare all’altra vista
         
-        self.presentViewController(vc! as! SettingsViewController, animated: true, completion: nil)
+        self.presentViewController(vc!, animated: true, completion: nil)
         
     }
 }
