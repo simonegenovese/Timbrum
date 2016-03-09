@@ -20,9 +20,9 @@ class ZucchettiParser {
             for row in jsonData  {
                 if row is NSArray {
                     if String("E")==(row[2] as! String) {
-                        count.sum(row[1] as! String)
+                        count.entrata(row[1] as! String)
                     } else{
-                        count.remove(row[1] as! String)
+                        count.uscita(row[1] as! String)
                     }
                 }
                 else {

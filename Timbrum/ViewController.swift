@@ -14,10 +14,14 @@ class ViewController: UIViewController, ZucchettiListener {
 //    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
     let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
 
+    @IBOutlet var oreResidue: UILabel!
+    @IBOutlet var oreTotali: UILabel!
     var zucchetti = ZucchettiController()
     let ENTRATA: NSNumber = 1.0
     let USCITA: NSNumber = 0.0
 
+    @IBOutlet var timeTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Connect to Zucchetti
@@ -58,7 +62,11 @@ class ViewController: UIViewController, ZucchettiListener {
         webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
         let parser = ZucchettiParser()
         parser.parse(data)
-        
+        oreTotali.text=parser.getOreTotali()
+        let tmpParser = TimeCounter()
+        tmpParser.entrata(parser.getOreTotali())
+        tmpParser.uscita("08:00")
+        oreResidue.text=tmpParser.getOreTotali()
     }
 }
 

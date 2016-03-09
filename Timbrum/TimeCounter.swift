@@ -14,33 +14,35 @@ class TimeCounter {
     var todayInterval = NSTimeInterval()
     var timeTable = [String: String]()
 
-    func sum(value: String) {
-        let hours = value.substringWithRange(value.startIndex ..< value.startIndex.advancedBy(2))
-        let minutes = value.substringWithRange(value.startIndex.advancedBy(2) ..< value.startIndex.advancedBy(4))
+    func entrata(value: String) {
+        let newValue = value.stringByReplacingOccurrencesOfString(":", withString: "")
+        let hours = newValue.substringWithRange(newValue.startIndex ..< newValue.startIndex.advancedBy(2))
+        let minutes = newValue.substringWithRange(newValue.startIndex.advancedBy(2) ..< newValue.startIndex.advancedBy(4))
 
-        let count =  todayInterval.advancedBy((Double(hours)!*60)+Double(minutes)!)
+        let count = todayInterval.advancedBy((Double(hours)! * 60) + Double(minutes)!)
         timeTable["\(hours):\(minutes)"] = "E"
         todayInterval = NSTimeInterval(count)
     }
 
-    func remove(value: String) {
-        let hours = value.substringWithRange(value.startIndex ..< value.startIndex.advancedBy(2))
-        let minutes = value.substringWithRange(value.startIndex.advancedBy(2) ..< value.startIndex.advancedBy(4))
-        let from =  NSTimeInterval((Double(hours)!*60)+Double(minutes)!)
-        
-        let count =  from.distanceTo(todayInterval)
+    func uscita(value: String) {
+        let newValue = value.stringByReplacingOccurrencesOfString(":", withString: "")
+        let hours = newValue.substringWithRange(newValue.startIndex ..< newValue.startIndex.advancedBy(2))
+        let minutes = newValue.substringWithRange(newValue.startIndex.advancedBy(2) ..< newValue.startIndex.advancedBy(4))
+        let from = NSTimeInterval((Double(hours)! * 60) + Double(minutes)!)
+
+        let count = -from.distanceTo(todayInterval)
         timeTable["\(hours):\(minutes)"] = "U"
         todayInterval = NSTimeInterval(count)
     }
 
     func getOreTotali() -> String {
-        let  hours = floor(todayInterval/60)
+        let hours = floor(todayInterval / 60)
         let minutes = trunc(todayInterval - hours * 60)
         let text = NSString().stringByAppendingFormat("%02d:%02d", NSInteger(hours), NSInteger(minutes))
         return text as String
     }
-    
-    func getTimeTable() -> [String: String] {
+
+    func getTimeTable() -> [String:String] {
         return timeTable
     }
 }
