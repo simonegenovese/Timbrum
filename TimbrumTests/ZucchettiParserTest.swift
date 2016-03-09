@@ -10,12 +10,12 @@ import XCTest
 @testable import Timbrum
 
 class ZucchettiParserTests: XCTestCase {
-    
+
     let parser = ZucchettiParser()
-    
+
     override func setUp() {
         super.setUp()
-        
+
 
     }
 

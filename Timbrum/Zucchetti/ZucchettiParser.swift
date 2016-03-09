@@ -15,17 +15,16 @@ class ZucchettiParser {
         var datastring: String = ""
         var jsonResult: NSDictionary
         do {
-            jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
+            jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             let jsonData = jsonResult["Data"] as! NSArray
-            for row in jsonData  {
+            for row in jsonData {
                 if row is NSArray {
-                    if String("E")==(row[2] as! String) {
+                    if String("E") == (row[2] as! String) {
                         count.entrata(row[1] as! String)
-                    } else{
+                    } else {
                         count.uscita(row[1] as! String)
                     }
-                }
-                else {
+                } else {
                     // obj is not an Array
                 }
             }
@@ -39,12 +38,12 @@ class ZucchettiParser {
         }
         return datastring
     }
-    
+
     func getOreTotali() -> String {
         return count.getOreTotali()
     }
-    
-    func getTimeTable() -> [String: String] {
+
+    func getTimeTable() -> [String:String] {
         return count.getTimeTable()
     }
 }
