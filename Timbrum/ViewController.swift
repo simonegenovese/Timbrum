@@ -11,22 +11,58 @@ import UIKit
 class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
+    
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userPassword: UITextField!
+    @IBOutlet weak var zucchettiServer: UITextField!
+    
 //    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
     let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
 
     @IBOutlet var oreResidue: UILabel!
     @IBOutlet var oreTotali: UILabel!
+    
     var zucchetti = ZucchettiController()
+    
     let ENTRATA: NSNumber = 1.0
     let USCITA: NSNumber = 0.0
-
+    
     @IBOutlet var timeTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Connect to Zucchetti
         zucchetti.addListener(self)
-        zucchetti.connect(ZUCCHETTI_SERVER)
+        connectToServer()
+    }
+    
+    func connectToServer() {
+        var server: String!
+        if zucchettiServer != nil {
+            server = zucchettiServer.text
+        } else {
+            server = ZUCCHETTI_SERVER
+        }
+        print("Connessione al server: \(server)")
+       
+        var usr: String!
+        if(userName != nil) {
+            usr = userName.text
+        } else {
+            usr = "demo"
+        }
+        print("Username: \(usr)")
+        
+        var pswd: String!
+        if(userPassword != nil) {
+            pswd = userPassword.text
+        } else {
+            pswd = "demo"
+        }
+        print("Password: \(pswd)")
+        
+        
+        zucchetti.connect(server, usr_name: usr, user_pswd: pswd)
     }
 
     override func didReceiveMemoryWarning() {

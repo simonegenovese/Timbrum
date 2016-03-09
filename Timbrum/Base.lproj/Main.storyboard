@@ -115,7 +115,7 @@
         <!--View Controller-->
         <scene sceneID="Lur-q0-1gS">
             <objects>
-                <viewController id="ORo-Kt-kgf" sceneMemberID="viewController">
+                <viewController id="ORo-Kt-kgf" customClass="ViewController" customModule="Timbrum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d60-zY-Myt"/>
                         <viewControllerLayoutGuide type="bottom" id="hEM-44-1Sw"/>
@@ -165,7 +165,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="URL Zucchetti" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcC-OA-uAy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://zucchetti.toshiro.it/app_dev.php" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcC-OA-uAy">
                                 <rect key="frame" x="227" y="240" width="314" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -197,6 +197,11 @@
                             <constraint firstItem="1H8-B3-xeJ" firstAttribute="leading" secondItem="HAk-gZ-QFN" secondAttribute="leading" id="yZb-iA-9gd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userName" destination="HAk-gZ-QFN" id="um8-SN-itS"/>
+                        <outlet property="userPassword" destination="1H8-B3-xeJ" id="RO9-eE-1ti"/>
+                        <outlet property="zucchettiServer" destination="AcC-OA-uAy" id="1j6-Oq-oIf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqk-am-QHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
