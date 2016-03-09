@@ -11,10 +11,7 @@ import UIKit
 class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
-    
-    @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var userPassword: UITextField!
-    @IBOutlet weak var zucchettiServer: UITextField!
+
     
 //    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
     let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
@@ -26,11 +23,15 @@ class ViewController: UIViewController, ZucchettiListener {
     
     let ENTRATA: NSNumber = 1.0
     let USCITA: NSNumber = 0.0
-    
+    var vc: SettingsViewController?
     @IBOutlet var timeTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //inizializziamo la nostra variabile e la identidichiamo tramite “Secondo”
+        vc = self.storyboard?.instantiateViewControllerWithIdentifier("Second") as? SettingsViewController
+
+        
         // Connect to Zucchetti
         zucchetti.addListener(self)
         connectToServer()
@@ -38,24 +39,24 @@ class ViewController: UIViewController, ZucchettiListener {
     
     func connectToServer() {
         var server: String!
-        if zucchettiServer != nil {
-            server = zucchettiServer.text
+        if vc!.getZucchettiServer() != nil {
+            server = vc!.getZucchettiServer()
         } else {
             server = ZUCCHETTI_SERVER
         }
         print("Connessione al server: \(server)")
        
         var usr: String!
-        if(userName != nil) {
-            usr = userName.text
+        if(vc!.getUserName() != nil) {
+            usr = vc!.getUserName()
         } else {
             usr = "demo"
         }
         print("Username: \(usr)")
         
         var pswd: String!
-        if(userPassword != nil) {
-            pswd = userPassword.text
+        if(vc!.getUserPassword() != nil) {
+            pswd = vc!.getUserPassword()
         } else {
             pswd = "demo"
         }
@@ -103,6 +104,14 @@ class ViewController: UIViewController, ZucchettiListener {
         tmpParser.entrata(parser.getOreTotali())
         tmpParser.uscita("08:00")
         oreResidue.text=tmpParser.getOreTotali()
+    }
+    
+    @IBAction func cambiaView(sender: AnyObject) {
+        
+        //il metodo presentViewController ci consente di passare all’altra vista
+        
+        self.presentViewController(vc! as! SettingsViewController, animated: true, completion: nil)
+        
     }
 }
 

@@ -10,6 +10,7 @@
 		1B0058D61C8B5D5B00909D7E /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0058D51C8B5D5B00909D7E /* TimeCounter.swift */; };
 		1B0D212B1C7D8AA800EB1CB3 /* enter32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0D21291C7D8AA800EB1CB3 /* enter32.png */; };
 		1B0D212C1C7D8AA800EB1CB3 /* exit32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0D212A1C7D8AA800EB1CB3 /* exit32.png */; };
+		1B8516FD1C90A26800F6C31D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8516FC1C90A26800F6C31D /* SettingsViewController.swift */; };
 		1B9172701C7CDC91000838FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91726F1C7CDC91000838FD /* AppDelegate.swift */; };
 		1B9172721C7CDC91000838FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9172711C7CDC91000838FD /* ViewController.swift */; };
 		1B9172751C7CDC91000838FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9172731C7CDC91000838FD /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		1B0058D51C8B5D5B00909D7E /* TimeCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 		1B0D21291C7D8AA800EB1CB3 /* enter32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enter32.png; sourceTree = "<group>"; };
 		1B0D212A1C7D8AA800EB1CB3 /* exit32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit32.png; sourceTree = "<group>"; };
+		1B8516FC1C90A26800F6C31D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Timbrum/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 		1B91726C1C7CDC91000838FD /* Timbrum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timbrum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B91726F1C7CDC91000838FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B9172711C7CDC91000838FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				734BE539A602B779E02C4AEF /* Zucchetti */,
 				1B91729D1C7CDCD6000838FD /* Supporting Files */,
 				1B9172711C7CDC91000838FD /* ViewController.swift */,
+				1B8516FC1C90A26800F6C31D /* SettingsViewController.swift */,
 				1B0058D51C8B5D5B00909D7E /* TimeCounter.swift */,
 				1B9172731C7CDC91000838FD /* Main.storyboard */,
 			);
@@ -315,6 +318,7 @@
 				734BE6DDF4B9B75DB02448DB /* ZucchettiController.swift in Sources */,
 				1B0058D61C8B5D5B00909D7E /* TimeCounter.swift in Sources */,
 				734BED7600EE7D6EA60D912A /* ZucchettiListener.swift in Sources */,
+				1B8516FD1C90A26800F6C31D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

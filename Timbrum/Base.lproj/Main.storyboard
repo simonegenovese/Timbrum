@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -76,9 +76,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Settings" image="gear.png"/>
                                 <connections>
-                                    <segue destination="ORo-Kt-kgf" kind="popoverPresentation" popoverAnchorView="CKy-m3-vva" id="N1U-nQ-nAA">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="cambiaView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvn-tu-xvG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,10 +127,11 @@
             </objects>
             <point key="canvasLocation" x="-1153" y="-334"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="Lur-q0-1gS">
             <objects>
-                <viewController id="ORo-Kt-kgf" customClass="ViewController" customModule="Timbrum" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqk-am-QHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Second" id="ORo-Kt-kgf" customClass="SettingsViewController" customModule="Timbrum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d60-zY-Myt"/>
                         <viewControllerLayoutGuide type="bottom" id="hEM-44-1Sw"/>
@@ -150,7 +149,7 @@
                                     <navigationItem title="Configurazione" id="ftg-ID-IA9">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="2PB-Zu-8DF">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="6c4-MS-Mnt"/>
+                                                <action selector="indietro:" destination="ORo-Kt-kgf" id="kVY-yY-paf"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -215,12 +214,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userName" destination="HAk-gZ-QFN" id="um8-SN-itS"/>
-                        <outlet property="userPassword" destination="1H8-B3-xeJ" id="RO9-eE-1ti"/>
-                        <outlet property="zucchettiServer" destination="AcC-OA-uAy" id="1j6-Oq-oIf"/>
+                        <outlet property="userName" destination="HAk-gZ-QFN" id="IOe-8j-xaq"/>
+                        <outlet property="userPassword" destination="1H8-B3-xeJ" id="qPj-tM-56i"/>
+                        <outlet property="zucchettiServer" destination="AcC-OA-uAy" id="OBl-g0-zw2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nqk-am-QHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-293" y="-334"/>
         </scene>
