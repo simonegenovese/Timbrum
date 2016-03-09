@@ -10,21 +10,35 @@ import XCTest
 @testable import Timbrum
 
 class TimeCounterTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testTimeAdd() {
         let timeCounter = TimeCounter()
         timeCounter.sum("0304")
+        XCTAssertEqual("03:04", timeCounter.getOreTotali())
+    }
+
+    func testTimeMultipleAdd() {
+        let timeCounter = TimeCounter()
+        timeCounter.sum("0304")
+        timeCounter.sum("0304")
+        XCTAssertEqual("06:08", timeCounter.getOreTotali())
     }
     
-    
+    func testTimeAddAndRemove() {
+        let timeCounter = TimeCounter()
+        timeCounter.sum("0304")
+        timeCounter.remove("0300")
+        XCTAssertEqual("00:04", timeCounter.getOreTotali())
+    }
+
 }

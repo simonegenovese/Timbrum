@@ -11,55 +11,32 @@ import UIKit
 
 
 class TimeCounter {
-    let userCalendar = NSCalendar.currentCalendar()
-    
-    var timeToday = NSDate()
-  
-    init(){
-                let mothersDayComponent = NSDateComponents()
-        
-                mothersDayComponent.year = 2016
-        
-                mothersDayComponent.month = 3
-        
-                mothersDayComponent.day = 9
-        
-                mothersDayComponent.hour = 0
-        
-                mothersDayComponent.minute = 0
-        
-                timeToday = userCalendar.dateFromComponents(mothersDayComponent)!
-    }
-    
-    func sum(value : String ){
+    var todayInterval = NSTimeInterval()
 
+
+    func sum(value: String) {
+        let hours = value.substringWithRange(value.startIndex ..< value.startIndex.advancedBy(2))
+        let minutes = value.substringWithRange(value.startIndex.advancedBy(2) ..< value.startIndex.advancedBy(4))
+
+        let count =  todayInterval.advancedBy((Double(hours)!*60)+Double(minutes)!)
         
-        
-        let addingPeriod = NSDateComponents()
-        
-        let hours = value.substringWithRange(value.startIndex..<value.startIndex.advancedBy(2))
-        addingPeriod.hour = Int(hours)!
-        
-        let minutes = value.substringWithRange(value.startIndex.advancedBy(2)..<value.startIndex.advancedBy(4))
-        addingPeriod.minute = Int(minutes)!
-        
-        if let newYearsParty = userCalendar.dateByAddingComponents(addingPeriod, toDate: timeToday, options: []) {
-            
-            let dateformatter = NSDateFormatter()
-            
-            dateformatter.dateStyle = NSDateFormatterStyle.MediumStyle
-            
-            dateformatter.timeStyle = NSDateFormatterStyle.ShortStyle
-            
-            print(dateformatter.stringFromDate(newYearsParty))
-        }
+        todayInterval = NSTimeInterval(count)
     }
-    
-    func remove( value : String){
+
+    func remove(value: String) {
+        let hours = value.substringWithRange(value.startIndex ..< value.startIndex.advancedBy(2))
+        let minutes = value.substringWithRange(value.startIndex.advancedBy(2) ..< value.startIndex.advancedBy(4))
+        let from =  NSTimeInterval((Double(hours)!*60)+Double(minutes)!)
         
+        let count =  from.distanceTo(todayInterval)
+        
+        todayInterval = NSTimeInterval(count)
     }
-    
+
     func getOreTotali() -> String {
-        return ""
+        let  minutes = floor(todayInterval/60)
+        let seconds = trunc(todayInterval - minutes * 60)
+        let text = NSString().stringByAppendingFormat("%02d:%02d", NSInteger(minutes), NSInteger(seconds))
+        return text as String
     }
 }
