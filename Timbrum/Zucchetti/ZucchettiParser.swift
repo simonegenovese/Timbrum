@@ -43,4 +43,8 @@ class ZucchettiParser {
     func getOreTotali() -> String {
         return count.getOreTotali()
     }
+    
+    func getTimeTable() -> [String: String] {
+        return count.getTimeTable()
+    }
 }
