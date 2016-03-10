@@ -96,7 +96,6 @@ class ViewController: UIViewController, ZucchettiListener {
     }
 
     func loadComplete(data: NSData) {
-        webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
         let parser = ZucchettiParser()
         parser.parse(data)
         oreTotali.text=parser.getOreTotali()
@@ -104,6 +103,8 @@ class ViewController: UIViewController, ZucchettiListener {
         tmpParser.entrata(parser.getOreTotali())
         tmpParser.uscita("08:00")
         oreResidue.text=tmpParser.getOreTotali()
+        webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
+
     }
     
     @IBAction func cambiaView(sender: AnyObject) {
