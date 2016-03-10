@@ -13,7 +13,6 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var zucchettiServer: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -51,4 +50,5 @@ class SettingsViewController: UIViewController {
             return userPassword.text
         }
     }
+    
 }

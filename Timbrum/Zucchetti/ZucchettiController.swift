@@ -9,7 +9,7 @@
 import Foundation
 
 class ZucchettiController {
-
+    
 //    var zucchettiServer = "http://zucchetti.toshiro.it/app_dev.php"
     var zucchettiServer: String!
     let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())

@@ -12,9 +12,10 @@ class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
 
+    let defValues = NSUserDefaults.standardUserDefaults()
     
 //    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
-    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
+//    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
 
     @IBOutlet var oreResidue: UILabel!
     @IBOutlet var oreTotali: UILabel!
@@ -28,9 +29,9 @@ class ViewController: UIViewController, ZucchettiListener {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //inizializziamo la nostra variabile e la identidichiamo tramite “Secondo”
         vc = self.storyboard?.instantiateViewControllerWithIdentifier("Second") as? SettingsViewController
-
         
         // Connect to Zucchetti
         zucchetti.addListener(self)
@@ -38,32 +39,47 @@ class ViewController: UIViewController, ZucchettiListener {
     }
     
     func connectToServer() {
-        var server: String!
-        if vc!.getZucchettiServer() != nil {
-            server = vc!.getZucchettiServer()
-        } else {
-            server = ZUCCHETTI_SERVER
-        }
-        print("Connessione al server: \(server)")
-       
-        var usr: String!
-        if(vc!.getUserName() != nil) {
-            usr = vc!.getUserName()
-        } else {
-            usr = "demo"
-        }
-        print("Username: \(usr)")
+        // recuperiamo i valori di default dalle impostazioni
         
-        var pswd: String!
-        if(vc!.getUserPassword() != nil) {
-            pswd = vc!.getUserPassword()
-        } else {
-            pswd = "demo"
+        let serverName = defValues.stringForKey("zucchettiServer")
+        print ("SERVER :\(serverName)")
+        
+        let userName = defValues.stringForKey("usrName")
+        print ("USER :\(userName)")
+        
+        let userPswd = defValues.stringForKey("usrPswd")
+        print ("PSWD :\(userPswd)")
+        
+        if(serverName != nil && userName != nil && userPswd != nil) {
+            zucchetti.connect(serverName!, usr_name: userName!, user_pswd: userPswd!)
         }
-        print("Password: \(pswd)")
         
         
-        zucchetti.connect(server, usr_name: usr, user_pswd: pswd)
+//        var server: String!
+//        if vc!.getZucchettiServer() != nil {
+//            server = vc!.getZucchettiServer()
+//        } else {
+//            server = ZUCCHETTI_SERVER
+//        }
+//        print("Connessione al server: \(server)")
+//       
+//        var usr: String!
+//        if(vc!.getUserName() != nil) {
+//            usr = vc!.getUserName()
+//        } else {
+//            usr = "demo"
+//        }
+//        print("Username: \(usr)")
+//        
+//        var pswd: String!
+//        if(vc!.getUserPassword() != nil) {
+//            pswd = vc!.getUserPassword()
+//        } else {
+//            pswd = "demo"
+//        }
+//        print("Password: \(pswd)")
+//        zucchetti.connect(server, usr_name: usr, user_pswd: pswd)
+        
     }
 
     override func didReceiveMemoryWarning() {
