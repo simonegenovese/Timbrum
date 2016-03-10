@@ -22,6 +22,7 @@
 		1BDE8F511C88D975008CD4A9 /* ZucchettiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE8F501C88D975008CD4A9 /* ZucchettiParser.swift */; };
 		1BDE8F531C88DBDB008CD4A9 /* ZucchettiParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE8F521C88DBDB008CD4A9 /* ZucchettiParserTest.swift */; };
 		1BE12BAC1C7ED9F300415344 /* ZucchettiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE12BAB1C7ED9F300415344 /* ZucchettiTests.swift */; };
+		1BFC973C1C91559E00F5A9F7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BFC973B1C91559E00F5A9F7 /* Settings.bundle */; };
 		734BE50D00DAAC1CC7D3485E /* NullZucchettiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BECA55DB8E39C306F18F5 /* NullZucchettiListener.swift */; };
 		734BE6DDF4B9B75DB02448DB /* ZucchettiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BE6848E7C5173B5EA7EC6 /* ZucchettiController.swift */; };
 		734BED7600EE7D6EA60D912A /* ZucchettiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BE7412B636352748B04F8 /* ZucchettiListener.swift */; };
@@ -67,6 +68,7 @@
 		1BDE8F501C88D975008CD4A9 /* ZucchettiParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiParser.swift; sourceTree = "<group>"; };
 		1BDE8F521C88DBDB008CD4A9 /* ZucchettiParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiParserTest.swift; sourceTree = "<group>"; };
 		1BE12BAB1C7ED9F300415344 /* ZucchettiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiTests.swift; sourceTree = "<group>"; };
+		1BFC973B1C91559E00F5A9F7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		734BE6848E7C5173B5EA7EC6 /* ZucchettiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiController.swift; sourceTree = "<group>"; };
 		734BE7412B636352748B04F8 /* ZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiListener.swift; sourceTree = "<group>"; };
 		734BECA55DB8E39C306F18F5 /* NullZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullZucchettiListener.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				1B9172761C7CDC91000838FD /* Assets.xcassets */,
 				1B9172781C7CDC91000838FD /* LaunchScreen.storyboard */,
 				1B91726F1C7CDC91000838FD /* AppDelegate.swift */,
+				1BFC973B1C91559E00F5A9F7 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				1B9172751C7CDC91000838FD /* Main.storyboard in Resources */,
 				1B0D212B1C7D8AA800EB1CB3 /* enter32.png in Resources */,
 				1B0D212C1C7D8AA800EB1CB3 /* exit32.png in Resources */,
+				1BFC973C1C91559E00F5A9F7 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
