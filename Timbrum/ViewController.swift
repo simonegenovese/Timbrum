@@ -49,7 +49,7 @@ class ViewController: UIViewController, ZucchettiListener {
         
         let userPswd = defValues.stringForKey("usrPswd")
         print ("PSWD :\(userPswd)")
-        
+       
         if(serverName != nil && userName != nil && userPswd != nil) {
             zucchetti.connect(serverName!, usr_name: userName!, user_pswd: userPswd!)
         }
