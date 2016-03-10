@@ -29,8 +29,6 @@
 			<string>Server Name</string>
 			<key>Key</key>
 			<string>zucchettiServer</string>
-			<key>DefaultValue</key>
-			<string>http://zucchetti.toshiro.it/app_dev.php</string>
 		</dict>
 	</array>
 </dict>

@@ -49,10 +49,6 @@ class SettingsViewController: UIViewController {
         let servnome = self.zucchettiServer.text!
         
         print("salvo: \(usrnome), \(usrpswd), \(servnome)")
-
-//        defValues.setObject(userName.text!, forKey: "userName")
-//        defValues.setObject(userPassword.text!, forKey: "userPswd")
-//        defValues.setValue(zucchettiServer.text!, forKey: "zucchettiServer")
     }
     
     override func didReceiveMemoryWarning() {

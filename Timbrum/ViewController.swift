@@ -13,9 +13,6 @@ class ViewController: UIViewController, ZucchettiListener {
     @IBOutlet var webView: UIWebView!
 
     let defValues = NSUserDefaults.standardUserDefaults()
-    
-//    let ZUCCHETTI_SERVER = "http://saas.hrzucchetti.it/hrpergon"
-//    let ZUCCHETTI_SERVER = "http://zucchetti.toshiro.it/app_dev.php"
 
     @IBOutlet var oreResidue: UILabel!
     @IBOutlet var oreTotali: UILabel!
@@ -54,32 +51,6 @@ class ViewController: UIViewController, ZucchettiListener {
             zucchetti.connect(serverName!, usr_name: userName!, user_pswd: userPswd!)
         }
         
-        
-//        var server: String!
-//        if vc!.getZucchettiServer() != nil {
-//            server = vc!.getZucchettiServer()
-//        } else {
-//            server = ZUCCHETTI_SERVER
-//        }
-//        print("Connessione al server: \(server)")
-//       
-//        var usr: String!
-//        if(vc!.getUserName() != nil) {
-//            usr = vc!.getUserName()
-//        } else {
-//            usr = "demo"
-//        }
-//        print("Username: \(usr)")
-//        
-//        var pswd: String!
-//        if(vc!.getUserPassword() != nil) {
-//            pswd = vc!.getUserPassword()
-//        } else {
-//            pswd = "demo"
-//        }
-//        print("Password: \(pswd)")
-//        zucchetti.connect(server, usr_name: usr, user_pswd: pswd)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,9 +85,10 @@ class ViewController: UIViewController, ZucchettiListener {
     func loadComplete(data: NSData) {
         let parser = ZucchettiParser()
         parser.parse(data)
-        oreTotali.text=parser.getOreTotali()
+        let oreTot = parser.getOreTotali()
+        oreTotali.text=oreTot
         let tmpParser = TimeCounter()
-        tmpParser.entrata(parser.getOreTotali())
+        tmpParser.entrata(oreTot)
         tmpParser.uscita("08:00")
         oreResidue.text=tmpParser.getOreTotali()
         webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
