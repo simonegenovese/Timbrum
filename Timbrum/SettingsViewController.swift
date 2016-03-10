@@ -9,13 +9,19 @@
 import UIKit
 class SettingsViewController: UIViewController {
     
+    let defValues = NSUserDefaults.standardUserDefaults()
+    
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var zucchettiServer: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        // sincronizziamo le impostazioni di default
+        userName.text = defValues.stringForKey("usrName")
+        userPassword.text = defValues.stringForKey("usrPswd")
+        zucchettiServer.text = defValues.stringForKey("zucchettiServer")
     }
     
     @IBAction func indietro(sender: AnyObject) {

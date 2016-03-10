@@ -10,7 +10,6 @@ import Foundation
 
 class ZucchettiController {
     
-//    var zucchettiServer = "http://zucchetti.toshiro.it/app_dev.php"
     var zucchettiServer: String!
     let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     var zucchettiListener: ZucchettiListener = NullZucchettiListener()
@@ -26,8 +25,6 @@ class ZucchettiController {
     
     func connect(url_to_request: String) {
         connect(url_to_request, usr_name: "demo", user_pswd: "demo")
-//        zucchettiServer = url_to_request
-//        executeRequest("\(zucchettiServer)/servlet/cp_login", requestParam: "m_cUserName=demo&m_cPassword=demo&m_cAction=login")
     }
 
     func enter() {
