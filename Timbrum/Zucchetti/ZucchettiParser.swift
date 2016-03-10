@@ -40,7 +40,39 @@ class ZucchettiParser {
     }
 
     func getOreTotali() -> String {
+        var last = "U"
+        let tmpCount = TimeCounter()
+        let sortedTimeTable = count.getTimeTable().sort { (map0, map1) -> Bool in
+            let firstTime = getTimeInterval(map0.0)
+            let secondTime = getTimeInterval(map1.0)
+            return firstTime.distanceTo(secondTime)>0
+        }
+        for (time, operation) in sortedTimeTable {
+            last = operation
+            if operation == "E" {
+                tmpCount.entrata(time)
+            } else{
+                tmpCount.uscita(time)
+            }
+        }
+        if last == "E" {
+            let date = NSDate()
+            let calendar = NSCalendar.currentCalendar()
+            let components = calendar.components([.Hour, .Minute], fromDate: date)
+            let hour = components.hour
+            let minutes = components.minute
+            tmpCount.uscita("\(hour):\(minutes)")
+            return tmpCount.getOreTotali()
+        }
         return count.getOreTotali()
+    }
+    
+    func getTimeInterval(tempo: String) -> NSTimeInterval{
+        let newValue = tempo.stringByReplacingOccurrencesOfString(":", withString: "")
+        let hours = newValue.substringWithRange(newValue.startIndex ..< newValue.startIndex.advancedBy(2))
+        let minutes = newValue.substringWithRange(newValue.startIndex.advancedBy(2) ..< newValue.startIndex.advancedBy(4))
+       
+        return NSTimeInterval(((Double(hours)! * 60) + Double(minutes)!)*60)
     }
 
     func getTimeTable() -> [String:String] {

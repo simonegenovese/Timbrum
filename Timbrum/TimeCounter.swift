@@ -19,7 +19,7 @@ class TimeCounter {
         let hours = newValue.substringWithRange(newValue.startIndex ..< newValue.startIndex.advancedBy(2))
         let minutes = newValue.substringWithRange(newValue.startIndex.advancedBy(2) ..< newValue.startIndex.advancedBy(4))
 
-        let count = todayInterval.advancedBy((Double(hours)! * 60) + Double(minutes)!)
+        let count = todayInterval.advancedBy(((Double(hours)! * 60) + Double(minutes)!)*60)
         timeTable["\(hours):\(minutes)"] = "E"
         todayInterval = NSTimeInterval(count)
     }
@@ -28,7 +28,7 @@ class TimeCounter {
         let newValue = value.stringByReplacingOccurrencesOfString(":", withString: "")
         let hours = newValue.substringWithRange(newValue.startIndex ..< newValue.startIndex.advancedBy(2))
         let minutes = newValue.substringWithRange(newValue.startIndex.advancedBy(2) ..< newValue.startIndex.advancedBy(4))
-        let from = NSTimeInterval((Double(hours)! * 60) + Double(minutes)!)
+        let from = NSTimeInterval(((Double(hours)! * 60) + Double(minutes)!)*60)
 
         let count = -from.distanceTo(todayInterval)
         timeTable["\(hours):\(minutes)"] = "U"
@@ -36,8 +36,8 @@ class TimeCounter {
     }
 
     func getOreTotali() -> String {
-        let hours = floor(todayInterval / 60)
-        let minutes = trunc(todayInterval - hours * 60)
+        let hours = floor(todayInterval / 3600)
+        let minutes = trunc(todayInterval / 60 - hours * 60)
         let text = NSString().stringByAppendingFormat("%02d:%02d", NSInteger(hours), NSInteger(minutes))
         return text as String
     }
