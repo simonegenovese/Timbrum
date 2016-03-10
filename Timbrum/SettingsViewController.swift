@@ -26,6 +26,33 @@ class SettingsViewController: UIViewController {
     
     @IBAction func indietro(sender: AnyObject) {
         dismissViewControllerAnimated(true , completion: nil);
+        // facciamo un check per vedere se le impostazioni sono modificate ed in caso suggeriamo di salvare?
+    }
+    
+    @IBAction func saveSettings(sender: UIButton) {
+        // sincronizziamo le impostazioni di default
+        
+        guard !self.userName.text!.isEmpty else {
+            return
+        }
+        
+        guard !self.userPassword.text!.isEmpty else {
+            return
+        }
+        
+        guard !self.zucchettiServer.text!.isEmpty else {
+            return
+        }
+        
+        let usrnome = self.userName.text!
+        let usrpswd = self.userPassword.text!
+        let servnome = self.zucchettiServer.text!
+        
+        print("salvo: \(usrnome), \(usrpswd), \(servnome)")
+
+//        defValues.setObject(userName.text!, forKey: "userName")
+//        defValues.setObject(userPassword.text!, forKey: "userPswd")
+//        defValues.setValue(zucchettiServer.text!, forKey: "zucchettiServer")
     }
     
     override func didReceiveMemoryWarning() {
