@@ -29,7 +29,7 @@ class ZucchettiParserTests: XCTestCase {
         let data = stringData.dataUsingEncoding(NSUTF8StringEncoding)
         let type = parser.parse(data!)
         XCTAssertEqual("Data", type)
-        XCTAssertEqual("4:30", parser.getOreTotali())
+        XCTAssertEqual("08:48", parser.getOreTotali())
 
     }
 }
