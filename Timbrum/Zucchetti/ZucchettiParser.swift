@@ -61,7 +61,8 @@ class ZucchettiParser {
             let components = calendar.components([.Hour, .Minute], fromDate: date)
             let hour = components.hour
             let minutes = components.minute
-            tmpCount.uscita("\(hour):\(minutes)")
+            let text = NSString().stringByAppendingFormat("%02d:%02d", NSInteger(hour), NSInteger(minutes))
+            tmpCount.uscita(text as String)
             return tmpCount.getOreTotali()
         }
         return count.getOreTotali()
