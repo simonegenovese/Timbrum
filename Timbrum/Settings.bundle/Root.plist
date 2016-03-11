@@ -17,6 +17,8 @@
 		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
+			<key>IsSecure</key>
+			<true/>
 			<key>Title</key>
 			<string>Password</string>
 			<key>Key</key>
