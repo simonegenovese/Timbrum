@@ -42,7 +42,6 @@ class TimeCounterTests: XCTestCase {
     }
 
 
-    
     func testTimeMultipleAddAndRemove() {
         let timeCounter = TimeCounter()
         timeCounter.entrata("0304")
@@ -51,7 +50,7 @@ class TimeCounterTests: XCTestCase {
         timeCounter.uscita("0504")
         XCTAssertEqual("01:29", timeCounter.getOreTotali())
     }
-    
+
     func testTimeAddAndRemoveTable() {
         let timeCounter = TimeCounter()
         timeCounter.entrata("0304")

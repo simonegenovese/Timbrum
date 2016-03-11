@@ -42,16 +42,17 @@ class ZucchettiParser {
     func getOreTotali() -> String {
         var last = "U"
         let tmpCount = TimeCounter()
-        let sortedTimeTable = count.getTimeTable().sort { (map0, map1) -> Bool in
+        let sortedTimeTable = count.getTimeTable().sort {
+            (map0, map1) -> Bool in
             let firstTime = getTimeInterval(map0.0)
             let secondTime = getTimeInterval(map1.0)
-            return firstTime.distanceTo(secondTime)>0
+            return firstTime.distanceTo(secondTime) > 0
         }
         for (time, operation) in sortedTimeTable {
             last = operation
             if operation == "E" {
                 tmpCount.entrata(time)
-            } else{
+            } else {
                 tmpCount.uscita(time)
             }
         }
@@ -67,13 +68,13 @@ class ZucchettiParser {
         }
         return count.getOreTotali()
     }
-    
-    func getTimeInterval(tempo: String) -> NSTimeInterval{
+
+    func getTimeInterval(tempo: String) -> NSTimeInterval {
         let newValue = tempo.stringByReplacingOccurrencesOfString(":", withString: "")
         let hours = newValue.substringWithRange(newValue.startIndex ..< newValue.startIndex.advancedBy(2))
         let minutes = newValue.substringWithRange(newValue.startIndex.advancedBy(2) ..< newValue.startIndex.advancedBy(4))
-       
-        return NSTimeInterval(((Double(hours)! * 60) + Double(minutes)!)*60)
+
+        return NSTimeInterval(((Double(hours)! * 60) + Double(minutes)!) * 60)
     }
 
     func getTimeTable() -> [String:String] {
