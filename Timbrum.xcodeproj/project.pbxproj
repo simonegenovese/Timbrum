@@ -27,6 +27,9 @@
 		734BE6DDF4B9B75DB02448DB /* ZucchettiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BE6848E7C5173B5EA7EC6 /* ZucchettiController.swift */; };
 		734BED7600EE7D6EA60D912A /* ZucchettiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734BE7412B636352748B04F8 /* ZucchettiListener.swift */; };
 		8B2038F91C8D6A74000B413F /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2038F81C8D6A74000B413F /* gear.png */; };
+		8B6A828A1C945868004ED4FC /* logoTimbrum.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6A82891C945868004ED4FC /* logoTimbrum.png */; };
+		8B6A828C1C945BE5004ED4FC /* logoTimbrum.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8B6A828B1C945BE5004ED4FC /* logoTimbrum.icns */; };
+		8B6A828E1C9465CD004ED4FC /* logoTimbrum57.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6A828D1C9465CD004ED4FC /* logoTimbrum57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		734BE7412B636352748B04F8 /* ZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZucchettiListener.swift; sourceTree = "<group>"; };
 		734BECA55DB8E39C306F18F5 /* NullZucchettiListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullZucchettiListener.swift; sourceTree = "<group>"; };
 		8B2038F81C8D6A74000B413F /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		8B6A82891C945868004ED4FC /* logoTimbrum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTimbrum.png; sourceTree = "<group>"; };
+		8B6A828B1C945BE5004ED4FC /* logoTimbrum.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = logoTimbrum.icns; sourceTree = "<group>"; };
+		8B6A828D1C9465CD004ED4FC /* logoTimbrum57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTimbrum57.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,9 @@
 		1B91729D1C7CDCD6000838FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8B6A828B1C945BE5004ED4FC /* logoTimbrum.icns */,
+				8B6A828D1C9465CD004ED4FC /* logoTimbrum57.png */,
+				8B6A82891C945868004ED4FC /* logoTimbrum.png */,
 				8B2038F81C8D6A74000B413F /* gear.png */,
 				1B0D21291C7D8AA800EB1CB3 /* enter32.png */,
 				1B0D212A1C7D8AA800EB1CB3 /* exit32.png */,
@@ -286,11 +295,14 @@
 			files = (
 				1B91727A1C7CDC91000838FD /* LaunchScreen.storyboard in Resources */,
 				1B9172771C7CDC91000838FD /* Assets.xcassets in Resources */,
+				8B6A828C1C945BE5004ED4FC /* logoTimbrum.icns in Resources */,
 				8B2038F91C8D6A74000B413F /* gear.png in Resources */,
+				8B6A828A1C945868004ED4FC /* logoTimbrum.png in Resources */,
 				1B9172751C7CDC91000838FD /* Main.storyboard in Resources */,
 				1B0D212B1C7D8AA800EB1CB3 /* enter32.png in Resources */,
 				1B0D212C1C7D8AA800EB1CB3 /* exit32.png in Resources */,
 				1BFC973C1C91559E00F5A9F7 /* Settings.bundle in Resources */,
+				8B6A828E1C9465CD004ED4FC /* logoTimbrum57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

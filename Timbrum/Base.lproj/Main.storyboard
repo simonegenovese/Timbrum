@@ -235,6 +235,6 @@
     <resources>
         <image name="enter32.png" width="32" height="32"/>
         <image name="exit32.png" width="32" height="32"/>
-        <image name="gear.png" width="594" height="601"/>
+        <image name="gear.png" width="32" height="32"/>
     </resources>
 </document>
