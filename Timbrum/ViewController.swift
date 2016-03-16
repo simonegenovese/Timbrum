@@ -8,15 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, ZucchettiListener {
+class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
-
-    let defValues = NSUserDefaults.standardUserDefaults()
-
+    @IBOutlet var timeTable: UITableView!
     @IBOutlet var oreResidueLabel: UITextField!
     @IBOutlet var oreResidue: UILabel!
     @IBOutlet var oreTotali: UILabel!
+    let defValues = NSUserDefaults.standardUserDefaults()
 
     var zucchetti = ZucchettiController()
 
@@ -24,13 +23,16 @@ class ViewController: UIViewController, ZucchettiListener {
     let USCITA: NSNumber = 0.0
     let ORE_LAVORATIVE = "08:00"
     var vc: SettingsViewController?
-    @IBOutlet var timeTable: UITableView!
+    var items: [Int: String] = [0: "Ore Lavorate Oggi:", 1:"Ore Residue Oggi:",2:"Ora uscita:"]
+    var values: [Int: String] = [0:"00:00", 1:"08:00", 2:"00:00"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //inizializziamo la nostra variabile e la identidichiamo tramite “Secondo”
         vc = self.storyboard?.instantiateViewControllerWithIdentifier("Second") as? SettingsViewController
+
+        self.timeTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
         // Connect to Zucchetti
         zucchetti.addListener(self)
@@ -88,7 +90,6 @@ class ViewController: UIViewController, ZucchettiListener {
         let parser = ZucchettiParser()
         parser.parse(data)
         let oreTot = parser.getOreTotali()
-        oreTotali.text = oreTot
         let tmpParser = TimeCounter()
         let firstTime = getTimeInterval(oreTot)
         let secondTime = getTimeInterval(ORE_LAVORATIVE)
@@ -101,8 +102,11 @@ class ViewController: UIViewController, ZucchettiListener {
             oreResidueLabel.textColor = UIColor.blueColor()
             oreResidueLabel.text = "Ore in eccesso:"
         }
-        oreResidue.text = tmpParser.getOreTotali()
-
+        values[0]=oreTot
+        values[1]=tmpParser.getOreTotali()
+        timeTable.reloadData()
+        timeTable.setNeedsDisplay()
+        timeTable.setNeedsLayout()
         webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
     }
 
@@ -120,6 +124,23 @@ class ViewController: UIViewController, ZucchettiListener {
         let minutes = newValue.substringWithRange(newValue.startIndex.advancedBy(2) ..< newValue.startIndex.advancedBy(4))
 
         return NSTimeInterval(((Double(hours)! * 60) + Double(minutes)!) * 60)
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.timeTable.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+        cell.textLabel?.text = self.items[indexPath.row]! + " " + self.values[indexPath.row]!
+        
+        return cell
+    }
+
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You selected cell #\(indexPath.row)!")
     }
 }
 
