@@ -12,9 +12,6 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
     @IBOutlet var timeTable: UITableView!
-    @IBOutlet var oreResidueLabel: UITextField!
-    @IBOutlet var oreResidue: UILabel!
-    @IBOutlet var oreTotali: UILabel!
     let defValues = NSUserDefaults.standardUserDefaults()
 
     var zucchetti = ZucchettiController()
@@ -69,7 +66,7 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     }
 
     func checkSlider(value: Float) -> Double {
-        print("value = \(value)")
+        print("slider value = \(value)")
         var sliderPosition: Double = 0.5
         if value == ENTRATA {
             sliderPosition = Double(value)
@@ -80,7 +77,7 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
             print("Hai Timbrato Uscita = \(value)")
             zucchetti.exit()
         } else {
-            print("Refresh")
+            print("--Refresh--")
             zucchetti.loadAccessLog()
         }
         return sliderPosition
@@ -91,17 +88,8 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         parser.parse(data)
         let oreTot = parser.getOreTotali()
         let tmpParser = TimeCounter()
-        let firstTime = getTimeInterval(oreTot)
-        let secondTime = getTimeInterval(ORE_LAVORATIVE)
         tmpParser.entrata(oreTot)
         tmpParser.uscita(ORE_LAVORATIVE)
-        if (firstTime.distanceTo(secondTime) > 0) {
-            oreResidueLabel.textColor = UIColor.redColor()
-            oreResidueLabel.text = "Ore Residue Oggi:"
-        } else {
-            oreResidueLabel.textColor = UIColor.blueColor()
-            oreResidueLabel.text = "Ore in eccesso:"
-        }
         values[0]=oreTot
         values[1]=tmpParser.getOreTotali()
         timeTable.reloadData()
@@ -111,11 +99,8 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     }
 
     @IBAction func cambiaView(sender: AnyObject) {
-
         //il metodo presentViewController ci consente di passare all’altra vista
-
         self.presentViewController(vc!, animated: true, completion: nil)
-
     }
 
     func getTimeInterval(tempo: String) -> NSTimeInterval {
@@ -140,7 +125,7 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+        print("Cell selected #\(indexPath.row)!")
     }
 }
 
