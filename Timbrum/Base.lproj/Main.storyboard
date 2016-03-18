@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
@@ -49,91 +49,74 @@
                                     <constraint firstAttribute="height" constant="102" id="dLk-ZU-2tE"/>
                                 </constraints>
                             </webView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45U-Zq-zO5">
-                                <rect key="frame" x="20" y="359" width="560" height="128"/>
-                                <connections>
-                                    <segue destination="G7W-u9-rio" kind="embed" id="Jh2-Ti-Mip"/>
-                                </connections>
-                            </containerView>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aen-dA-72i">
-                                <rect key="frame" x="20" y="359" width="280" height="128"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-SF-rko">
+                                <rect key="frame" x="300" y="359" width="280" height="127"/>
                                 <color key="backgroundColor" red="0.05743977502" green="0.39951420560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="enter32.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="entrata">
-                                            <attributes>
-                                                <color key="NSColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="11" name="Menlo-Regular"/>
-                                                <integer key="NSLigature" value="0"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="26.450000762939453">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="logButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZU-Y1-6WT"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-SF-rko">
-                                <rect key="frame" x="300" y="359" width="280" height="128"/>
-                                <color key="backgroundColor" red="0.05743977502" green="0.39951420560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="exit32.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="uscita">
-                                            <attributes>
-                                                <color key="NSColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="11" name="Menlo-Regular"/>
-                                                <integer key="NSLigature" value="0"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="26.450000762939453">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
+                                <state key="normal" title="uscita" image="exit32.png">
+                                    <color key="titleColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="logButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQC-Rr-7hX"/>
                                 </connections>
                             </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aen-dA-72i">
+                                <rect key="frame" x="20" y="359" width="280" height="127"/>
+                                <color key="backgroundColor" red="0.05743977502" green="0.39951420560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
+                                <state key="normal" title="entrata" image="enter32.png">
+                                    <color key="titleColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZU-Y1-6WT"/>
+                                </connections>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoX-Dy-FIA">
+                                <rect key="frame" x="20" y="543" width="560" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="k0i-u0-Sfu"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem systemItem="history" id="RgG-K9-myz"/>
+                                    <tabBarItem enabled="NO" systemItem="search" id="nSJ-Fg-iE2"/>
+                                    <tabBarItem selectedImage="configura.png" systemItem="more" id="e6n-qY-3n7"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="45U-Zq-zO5" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="8" symbolic="YES" id="0JE-Nw-JFs"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="byj-4g-ZW5" secondAttribute="bottom" constant="13" id="2Fo-wO-OLc"/>
-                            <constraint firstItem="fhc-SF-rko" firstAttribute="leading" secondItem="Aen-dA-72i" secondAttribute="trailing" id="2lj-WX-G1h"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="113" id="9FO-Wz-5Rf"/>
-                            <constraint firstItem="45U-Zq-zO5" firstAttribute="leading" secondItem="M3Q-2y-EL6" secondAttribute="leading" id="AGT-PF-fPg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HoX-Dy-FIA" secondAttribute="trailing" id="ALS-WM-eXf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M3Q-2y-EL6" secondAttribute="trailing" id="Cb4-ii-hI1"/>
-                            <constraint firstItem="45U-Zq-zO5" firstAttribute="leading" secondItem="Aen-dA-72i" secondAttribute="trailing" constant="-280" id="SaJ-cY-doY"/>
-                            <constraint firstItem="45U-Zq-zO5" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="top" id="Tl7-CL-XUG"/>
-                            <constraint firstItem="45U-Zq-zO5" firstAttribute="bottom" secondItem="Aen-dA-72i" secondAttribute="bottom" id="c6c-aw-ITf"/>
+                            <constraint firstItem="Aen-dA-72i" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="8" id="Coz-Ny-bVG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HoX-Dy-FIA" secondAttribute="bottom" constant="8" id="G9b-yX-b4U"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Aen-dA-72i" secondAttribute="leading" id="M62-v6-vgm"/>
+                            <constraint firstItem="fhc-SF-rko" firstAttribute="leading" secondItem="Aen-dA-72i" secondAttribute="trailing" id="cmG-xp-Ifu"/>
+                            <constraint firstItem="fhc-SF-rko" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="339" id="doj-OO-sKl"/>
+                            <constraint firstItem="HoX-Dy-FIA" firstAttribute="top" secondItem="fhc-SF-rko" secondAttribute="bottom" constant="57" id="eJk-eY-ft9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="byj-4g-ZW5" secondAttribute="trailing" id="eSC-XN-oqp"/>
+                            <constraint firstItem="HoX-Dy-FIA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eYy-xE-qc2"/>
                             <constraint firstItem="CKy-m3-vva" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="eeB-MI-4ns"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CKy-m3-vva" secondAttribute="trailing" constant="5" id="ej8-4Y-5xA"/>
-                            <constraint firstItem="fhc-SF-rko" firstAttribute="centerY" secondItem="45U-Zq-zO5" secondAttribute="centerY" id="mBj-Nj-kxU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fhc-SF-rko" secondAttribute="trailing" id="fZT-3f-dOZ"/>
+                            <constraint firstItem="HoX-Dy-FIA" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="57" id="gdm-Cb-r6H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fhc-SF-rko" secondAttribute="trailing" id="krZ-X4-Wa1"/>
+                            <constraint firstItem="Aen-dA-72i" firstAttribute="width" secondItem="fhc-SF-rko" secondAttribute="width" id="n9r-KV-s13"/>
                             <constraint firstAttribute="leadingMargin" secondItem="byj-4g-ZW5" secondAttribute="leading" id="nGX-3y-2gq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HoX-Dy-FIA" secondAttribute="leading" id="ofn-Pz-kWb"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pHC-Y5-vD9"/>
+                            <constraint firstItem="Aen-dA-72i" firstAttribute="height" secondItem="fhc-SF-rko" secondAttribute="height" id="pK6-rw-5Ee"/>
                             <constraint firstAttribute="leadingMargin" secondItem="M3Q-2y-EL6" secondAttribute="leading" id="tAp-eA-xE1"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="usf-UQ-wJc"/>
-                            <constraint firstItem="45U-Zq-zO5" firstAttribute="trailing" secondItem="M3Q-2y-EL6" secondAttribute="trailing" id="v1h-6Z-GIL"/>
-                            <constraint firstItem="fhc-SF-rko" firstAttribute="trailing" secondItem="45U-Zq-zO5" secondAttribute="trailing" id="vQ8-1B-LOx"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="CKy-m3-vva" secondAttribute="bottom" constant="8" id="x05-08-AwN"/>
-                            <constraint firstItem="45U-Zq-zO5" firstAttribute="leading" secondItem="Aen-dA-72i" secondAttribute="leading" id="z3u-OR-Qkd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="entrata" destination="Aen-dA-72i" id="mhX-Jr-aTk"/>
                         <outlet property="timeTable" destination="byj-4g-ZW5" id="3dC-Kr-2Aa"/>
+                        <outlet property="uscita" destination="fhc-SF-rko" id="D37-ON-Oek"/>
                         <outlet property="webView" destination="M3Q-2y-EL6" id="q2c-EW-14U"/>
                     </connections>
                 </viewController>
@@ -248,8 +231,12 @@
         <scene sceneID="d0F-YK-0Ri">
             <objects>
                 <viewController id="G7W-u9-rio" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cq7-V4-2FG"/>
+                        <viewControllerLayoutGuide type="bottom" id="r13-9j-57E"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F0N-Zz-ERt">
-                        <rect key="frame" x="0.0" y="0.0" width="560" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
