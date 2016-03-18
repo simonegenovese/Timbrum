@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, UITableViewDataSource{
+class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
     @IBOutlet var timeTable: UITableView!
@@ -20,8 +20,8 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     let USCITA: NSNumber = 0.0
     let ORE_LAVORATIVE = "08:00"
     var vc: SettingsViewController?
-    var items: [Int: String] = [0: "Ore Lavorate Oggi:", 1:"Ore Residue Oggi:",2:"Ora uscita:"]
-    var values: [Int: String] = [0:"00:00", 1:"08:00", 2:"00:00"]
+    var items: [Int:String] = [0: "Ore Lavorate Oggi:", 1: "Ore Residue Oggi:", 2: "Ora uscita:"]
+    var values: [Int:String] = [0: "00:00", 1: "08:00", 2: "00:00"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +90,8 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         let tmpParser = TimeCounter()
         tmpParser.entrata(oreTot)
         tmpParser.uscita(ORE_LAVORATIVE)
-        values[0]=oreTot
-        values[1]=tmpParser.getOreTotali()
+        values[0] = oreTot
+        values[1] = tmpParser.getOreTotali()
         timeTable.reloadData()
         timeTable.setNeedsDisplay()
         timeTable.setNeedsLayout()
@@ -110,20 +110,20 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
 
         return NSTimeInterval(((Double(hours)! * 60) + Double(minutes)!) * 60)
     }
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count;
     }
-    
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.timeTable.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        
+        let cell: UITableViewCell = self.timeTable.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+
         cell.textLabel?.text = self.items[indexPath.row]! + " " + self.values[indexPath.row]!
-        
+        cell.detailTextLabel?.text = "More text";
+        cell.imageView!.image = UIImage(named: "gear.png")
         return cell
     }
 
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("Cell selected #\(indexPath.row)!")
     }
