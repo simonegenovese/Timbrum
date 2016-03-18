@@ -96,7 +96,18 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         tmpParser.uscita(ORE_LAVORATIVE)
         values[0] = oreTot
         values[1] = tmpParser.getOreTotali()
-
+        let sortedTimeTable = parser.getTimeTable().sort {
+            (map0, map1) -> Bool in
+            let firstTime = getTimeInterval(map0.0)
+            let secondTime = getTimeInterval(map1.0)
+            return firstTime.distanceTo(secondTime) > 0
+        }
+        for (time, operation) in sortedTimeTable {
+            if(!items.values.contains(time)){
+                items[items.count]=time
+                values[values.count]=operation
+            }
+        }
         dispatch_async(dispatch_get_main_queue(),{
             self.timeTable.reloadData()
         });
