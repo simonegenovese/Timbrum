@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timbrum-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timbrum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Timbrum" id="BYZ-38-t0r" customClass="ViewController" customModule="Timbrum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,57 +18,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" minimumValueImage="exit32.png" maximumValueImage="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" minimumValueImage="exit32.png" maximumValueImage="enter32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ju-Go8">
                                 <rect key="frame" x="18" y="549" width="564" height="32"/>
                                 <connections>
                                     <action selector="logEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="z8r-l9-bVr"/>
                                 </connections>
                             </slider>
-                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-2y-EL6">
-                                <rect key="frame" x="20" y="358" width="560" height="183"/>
-                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="deviceRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="dLk-ZU-2tE"/>
-                                </constraints>
-                            </webView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-m3-vva">
                                 <rect key="frame" x="543" y="28" width="32" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="En0-Va-9P7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Settings" image="gear.png"/>
+                                <state key="normal" title="Settings" image="configura.png">
+                                    <color key="titleColor" red="0.66270794789999998" green="0.074180558509999994" blue="0.02023145577" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.66270794789999998" green="0.074180558509999994" blue="0.02023145577" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cambiaView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvn-tu-xvG"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="byj-4g-ZW5">
-                                <rect key="frame" x="20" y="68" width="560" height="282"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="byj-4g-ZW5">
+                                <rect key="frame" x="20" y="68" width="560" height="168"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Q0H-Hn-XWw"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="t4u-Vw-jIa"/>
                                 </connections>
                             </tableView>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-2y-EL6">
+                                <rect key="frame" x="20" y="249" width="560" height="102"/>
+                                <color key="backgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="dLk-ZU-2tE"/>
+                                </constraints>
+                            </webView>
+                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc8-H9-qFt">
+                                <rect key="frame" x="121" y="405" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="bjb-OK-kAX"/>
+                                    <constraint firstAttribute="height" constant="100" id="hh8-pZ-WFV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="entrata" backgroundImage="enter32.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pVO-7B-VXM"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-6w-jTz">
+                                <rect key="frame" x="378" y="405" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OlX-TT-RIL"/>
+                                    <constraint firstAttribute="height" constant="100" id="W2Z-VS-pwS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="uscita" backgroundImage="exit32.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QW2-mP-FhE"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="xc8-H9-qFt" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="20" id="0J6-wB-W3L"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="CKy-m3-vva" secondAttribute="bottom" constant="8" id="5md-TR-rAE"/>
                             <constraint firstItem="CKy-m3-vva" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7Aa-gy-HPX"/>
-                            <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="byj-4g-ZW5" secondAttribute="bottom" constant="8" symbolic="YES" id="8nO-YH-63g"/>
+                            <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="byj-4g-ZW5" secondAttribute="bottom" constant="13" id="8nO-YH-63g"/>
+                            <constraint firstItem="6F7-ju-Go8" firstAttribute="top" secondItem="xc8-H9-qFt" secondAttribute="bottom" constant="20" id="DGe-UT-Ect"/>
                             <constraint firstAttribute="bottom" secondItem="6F7-ju-Go8" secondAttribute="bottom" constant="20" symbolic="YES" id="IQ1-B9-zqg"/>
-                            <constraint firstItem="6F7-ju-Go8" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="8" symbolic="YES" id="JFY-dm-DrV"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="byj-4g-ZW5" secondAttribute="bottom" constant="8" id="LLw-Dz-p6V"/>
                             <constraint firstAttribute="leadingMargin" secondItem="byj-4g-ZW5" secondAttribute="leading" id="OmV-Tq-DmT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iWZ-6w-jTz" secondAttribute="trailing" constant="20" id="Or8-8O-k1H"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="trailing" secondItem="6F7-ju-Go8" secondAttribute="trailing" id="QHY-92-fCW"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="byj-4g-ZW5" secondAttribute="bottom" constant="23" id="UjK-Pe-fgP"/>
+                            <constraint firstItem="6F7-ju-Go8" firstAttribute="top" secondItem="iWZ-6w-jTz" secondAttribute="bottom" constant="20" id="Xbj-Ms-9EN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xc8-H9-qFt" secondAttribute="bottom" constant="35" id="XlK-Pz-DJ7"/>
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aUj-Xp-NwC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CKy-m3-vva" secondAttribute="trailing" constant="5" id="bFd-WU-Esx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="byj-4g-ZW5" secondAttribute="trailing" constant="5" id="bZ5-va-d9c"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="fVX-23-x2s"/>
+                            <constraint firstItem="iWZ-6w-jTz" firstAttribute="leading" secondItem="xc8-H9-qFt" secondAttribute="trailing" constant="20" id="ftq-dQ-S1J"/>
                             <constraint firstAttribute="leadingMargin" secondItem="byj-4g-ZW5" secondAttribute="leading" id="jgf-Z6-Kaa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="byj-4g-ZW5" secondAttribute="trailing" id="l1B-l5-XNS"/>
+                            <constraint firstItem="iWZ-6w-jTz" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="20" id="lbu-4C-8cq"/>
+                            <constraint firstItem="xc8-H9-qFt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="m0y-Au-Ke8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iWZ-6w-jTz" secondAttribute="bottom" constant="35" id="mfo-PI-Xxq"/>
                             <constraint firstItem="6F7-ju-Go8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uWq-Hq-kn5"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="trailing" secondItem="M3Q-2y-EL6" secondAttribute="trailing" id="upD-tU-uxn"/>
                             <constraint firstItem="M3Q-2y-EL6" firstAttribute="leading" secondItem="6F7-ju-Go8" secondAttribute="leading" id="xsE-Cr-ciB"/>
@@ -79,12 +124,18 @@
                                 <exclude reference="l1B-l5-XNS"/>
                                 <exclude reference="LLw-Dz-p6V"/>
                                 <exclude reference="UjK-Pe-fgP"/>
+                                <exclude reference="DGe-UT-Ect"/>
+                                <exclude reference="IQ1-B9-zqg"/>
+                                <exclude reference="ftq-dQ-S1J"/>
+                                <exclude reference="XlK-Pz-DJ7"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="entrata" destination="xc8-H9-qFt" id="tFm-mh-3AT"/>
                         <outlet property="slider" destination="6F7-ju-Go8" id="4SC-bn-WFI"/>
                         <outlet property="timeTable" destination="byj-4g-ZW5" id="3dC-Kr-2Aa"/>
+                        <outlet property="uscita" destination="iWZ-6w-jTz" id="5vY-9e-Ja2"/>
                         <outlet property="webView" destination="M3Q-2y-EL6" id="q2c-EW-14U"/>
                     </connections>
                 </viewController>
@@ -197,8 +248,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="configura.png" width="308" height="308"/>
         <image name="enter32.png" width="32" height="32"/>
         <image name="exit32.png" width="32" height="32"/>
-        <image name="gear.png" width="32" height="32"/>
     </resources>
 </document>

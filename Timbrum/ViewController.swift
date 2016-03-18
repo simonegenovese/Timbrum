@@ -12,6 +12,10 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     @IBOutlet var slider: UISlider!
     @IBOutlet var webView: UIWebView!
     @IBOutlet var timeTable: UITableView!
+    
+    @IBOutlet weak var uscita: UIButton!
+    @IBOutlet weak var entrata: UIButton!
+    
     let defValues = NSUserDefaults.standardUserDefaults()
 
     var zucchetti = ZucchettiController()
@@ -59,6 +63,20 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func logButtonEvent(sender: UIButton) {
+        let timbratura = sender.currentTitle!
+        print("press button = \(timbratura)")
+        
+        switch timbratura {
+            case "entrata": zucchetti.enter()
+            case "uscita": zucchetti.exit()
+            
+            default: break
+        }
+        zucchetti.loadAccessLog()
+    }
+    
+    
     @IBAction func logEvent(sender: UISlider) {
         let value = sender.value
         let newPosition = checkSlider(value)
