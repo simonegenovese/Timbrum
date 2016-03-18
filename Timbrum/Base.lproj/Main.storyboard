@@ -18,23 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-m3-vva">
-                                <rect key="frame" x="543" y="28" width="32" height="32"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="En0-Va-9P7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Settings" image="configura.png">
-                                    <color key="titleColor" red="0.66270794789999998" green="0.074180558509999994" blue="0.02023145577" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.66270794789999998" green="0.074180558509999994" blue="0.02023145577" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cambiaView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvn-tu-xvG"/>
-                                </connections>
-                            </button>
+                            <label autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timbum" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="4" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pq-LC-074">
+                                <rect key="frame" x="248" y="28" width="109" height="34"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="byj-4g-ZW5">
-                                <rect key="frame" x="20" y="68" width="560" height="168"/>
+                                <rect key="frame" x="20" y="83" width="560" height="325"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -42,82 +37,90 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="t4u-Vw-jIa"/>
                                 </connections>
                             </tableView>
-                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-2y-EL6">
-                                <rect key="frame" x="20" y="249" width="560" height="102"/>
-                                <color key="backgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-SF-rko">
+                                <rect key="frame" x="300" y="416" width="280" height="70"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="102" id="dLk-ZU-2tE"/>
+                                    <constraint firstAttribute="height" constant="70" id="G0D-OH-Jmx"/>
                                 </constraints>
-                            </webView>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-SF-rko">
-                                <rect key="frame" x="300" y="359" width="280" height="127"/>
-                                <color key="backgroundColor" red="0.05743977502" green="0.39951420560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
-                                <state key="normal" title="uscita" image="exit32.png">
-                                    <color key="titleColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="uscita" image="exit32.png"/>
                                 <connections>
                                     <action selector="logButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQC-Rr-7hX"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aen-dA-72i">
-                                <rect key="frame" x="20" y="359" width="280" height="127"/>
-                                <color key="backgroundColor" red="0.05743977502" green="0.39951420560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="11"/>
-                                <state key="normal" title="entrata" image="enter32.png">
-                                    <color key="titleColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aen-dA-72i">
+                                <rect key="frame" x="20" y="416" width="280" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.90804037640000002" blue="0.5056868605" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="e5X-AM-mii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <state key="normal" title="entrata" image="enter32.png"/>
                                 <connections>
                                     <action selector="logButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZU-Y1-6WT"/>
                                 </connections>
                             </button>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoX-Dy-FIA">
-                                <rect key="frame" x="20" y="543" width="560" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="k0i-u0-Sfu"/>
-                                </constraints>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZI-Lo-IRH">
+                                <rect key="frame" x="25" y="521" width="555" height="44"/>
+                                <color key="backgroundColor" red="0.91579718053619574" green="1" blue="0.95038356827378101" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <tabBarItem systemItem="history" id="RgG-K9-myz"/>
-                                    <tabBarItem enabled="NO" systemItem="search" id="nSJ-Fg-iE2"/>
-                                    <tabBarItem selectedImage="configura.png" systemItem="more" id="e6n-qY-3n7"/>
+                                    <barButtonItem title="Parametri" id="pUD-Ei-uIJ">
+                                        <inset key="imageInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                        <connections>
+                                            <action selector="cambiaView:" destination="BYZ-38-t0r" id="nPa-GJ-fZg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Giustificativi" id="Okj-JR-Bsq"/>
                                 </items>
-                            </tabBar>
+                            </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="M3Q-2y-EL6" firstAttribute="top" secondItem="byj-4g-ZW5" secondAttribute="bottom" constant="13" id="2Fo-wO-OLc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HoX-Dy-FIA" secondAttribute="trailing" id="ALS-WM-eXf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="M3Q-2y-EL6" secondAttribute="trailing" id="Cb4-ii-hI1"/>
-                            <constraint firstItem="Aen-dA-72i" firstAttribute="top" secondItem="M3Q-2y-EL6" secondAttribute="bottom" constant="8" id="Coz-Ny-bVG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HoX-Dy-FIA" secondAttribute="bottom" constant="8" id="G9b-yX-b4U"/>
+                            <constraint firstItem="4pq-LC-074" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3PK-Av-sjx"/>
+                            <constraint firstItem="4pq-LC-074" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7yb-ee-Hop"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fhc-SF-rko" secondAttribute="bottom" constant="70" id="Co8-UT-Kvz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4pq-LC-074" secondAttribute="trailing" constant="223" id="GUL-Ml-9I2"/>
+                            <constraint firstItem="fhc-SF-rko" firstAttribute="height" secondItem="Aen-dA-72i" secondAttribute="height" id="HG7-Op-DXD"/>
+                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="Iga-Xs-PlO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Aen-dA-72i" secondAttribute="leading" id="M62-v6-vgm"/>
+                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="35" id="STq-ph-E4H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QZI-Lo-IRH" secondAttribute="trailing" id="Shu-xq-Jeh"/>
+                            <constraint firstItem="4pq-LC-074" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WDp-vi-9Wf"/>
+                            <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="4pq-LC-074" secondAttribute="bottom" constant="8" id="Xhf-cm-uVr"/>
+                            <constraint firstItem="4pq-LC-074" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="228" id="cNC-he-vmE"/>
                             <constraint firstItem="fhc-SF-rko" firstAttribute="leading" secondItem="Aen-dA-72i" secondAttribute="trailing" id="cmG-xp-Ifu"/>
-                            <constraint firstItem="fhc-SF-rko" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="339" id="doj-OO-sKl"/>
-                            <constraint firstItem="HoX-Dy-FIA" firstAttribute="top" secondItem="fhc-SF-rko" secondAttribute="bottom" constant="57" id="eJk-eY-ft9"/>
+                            <constraint firstItem="fhc-SF-rko" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="396" id="doj-OO-sKl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="byj-4g-ZW5" secondAttribute="trailing" id="eSC-XN-oqp"/>
-                            <constraint firstItem="HoX-Dy-FIA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eYy-xE-qc2"/>
-                            <constraint firstItem="CKy-m3-vva" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="eeB-MI-4ns"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CKy-m3-vva" secondAttribute="trailing" constant="5" id="ej8-4Y-5xA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fhc-SF-rko" secondAttribute="trailing" id="fZT-3f-dOZ"/>
-                            <constraint firstItem="HoX-Dy-FIA" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="57" id="gdm-Cb-r6H"/>
+                            <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gao-pM-GlI"/>
+                            <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="4pq-LC-074" secondAttribute="bottom" constant="21" id="iLh-4T-xpw"/>
+                            <constraint firstItem="Aen-dA-72i" firstAttribute="top" secondItem="byj-4g-ZW5" secondAttribute="bottom" constant="8" id="j8w-9F-uz7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fhc-SF-rko" secondAttribute="trailing" id="krZ-X4-Wa1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="70" id="ks8-sd-fUG"/>
                             <constraint firstItem="Aen-dA-72i" firstAttribute="width" secondItem="fhc-SF-rko" secondAttribute="width" id="n9r-KV-s13"/>
                             <constraint firstAttribute="leadingMargin" secondItem="byj-4g-ZW5" secondAttribute="leading" id="nGX-3y-2gq"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="HoX-Dy-FIA" secondAttribute="leading" id="ofn-Pz-kWb"/>
-                            <constraint firstItem="M3Q-2y-EL6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pHC-Y5-vD9"/>
-                            <constraint firstItem="Aen-dA-72i" firstAttribute="height" secondItem="fhc-SF-rko" secondAttribute="height" id="pK6-rw-5Ee"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="M3Q-2y-EL6" secondAttribute="leading" id="tAp-eA-xE1"/>
+                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="top" secondItem="fhc-SF-rko" secondAttribute="bottom" constant="35" id="rS3-wu-CVM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QZI-Lo-IRH" secondAttribute="bottom" constant="-9" id="sj6-La-qOH"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="usf-UQ-wJc"/>
-                            <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="CKy-m3-vva" secondAttribute="bottom" constant="8" id="x05-08-AwN"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Xhf-cm-uVr"/>
+                                <exclude reference="gao-pM-GlI"/>
+                                <exclude reference="usf-UQ-wJc"/>
+                                <exclude reference="7yb-ee-Hop"/>
+                                <exclude reference="WDp-vi-9Wf"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="entrata" destination="Aen-dA-72i" id="mhX-Jr-aTk"/>
                         <outlet property="timeTable" destination="byj-4g-ZW5" id="3dC-Kr-2Aa"/>
                         <outlet property="uscita" destination="fhc-SF-rko" id="D37-ON-Oek"/>
-                        <outlet property="webView" destination="M3Q-2y-EL6" id="q2c-EW-14U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -227,26 +230,8 @@
             </objects>
             <point key="canvasLocation" x="-293" y="-334"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="d0F-YK-0Ri">
-            <objects>
-                <viewController id="G7W-u9-rio" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cq7-V4-2FG"/>
-                        <viewControllerLayoutGuide type="bottom" id="r13-9j-57E"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="F0N-Zz-ERt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EPf-yv-S6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
-        <image name="configura.png" width="308" height="308"/>
         <image name="enter32.png" width="32" height="32"/>
         <image name="exit32.png" width="32" height="32"/>
     </resources>

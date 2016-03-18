@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, UITableViewDataSource {
-//    @IBOutlet var slider: UISlider!
-    @IBOutlet var webView: UIWebView!
     @IBOutlet var timeTable: UITableView!
     
     @IBOutlet weak var uscita: UIButton!
@@ -30,6 +28,7 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         refreshControl.backgroundColor = UIColor.lightGrayColor()
         refreshControl.tintColor = UIColor.blueColor()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -81,30 +80,6 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         }
         zucchetti.loadAccessLog()
     }
-    
-    
-//    @IBAction func logEvent(sender: UISlider) {
-//        let value = sender.value
-//        let newPosition = checkSlider(value)
-//        slider.setValue(Float(newPosition), animated: true)
-//    }
-
-//    func checkSlider(value: Float) -> Double {
-//        print("slider value = \(value)")
-//        var sliderPosition: Double = 0.5
-//        if value == ENTRATA {
-//            sliderPosition = Double(value)
-//            print("Hai Timbrato Entrata= \(value)")
-//            zucchetti.enter()
-//        } else if value == USCITA {
-//            sliderPosition = Double(value)
-//            print("Hai Timbrato Uscita = \(value)")
-//            zucchetti.exit()
-//        } else {
-//            reloadData()
-//        }
-//        return sliderPosition
-//    }
 
     func reloadData(){
         print("--Refresh--")
@@ -124,7 +99,6 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         timeTable.reloadData()
         timeTable.setNeedsDisplay()
         timeTable.setNeedsLayout()
-        webView.loadData(data, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: NSURL(string: "")!)
     }
 
     @IBAction func cambiaView(sender: AnyObject) {
