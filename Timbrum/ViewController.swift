@@ -26,10 +26,16 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     var vc: SettingsViewController?
     var items: [Int:String] = [0: "Ore Lavorate Oggi:", 1: "Ore Residue Oggi:", 2: "Ora uscita:"]
     var values: [Int:String] = [0: "00:00", 1: "08:00", 2: "00:00"]
-
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        refreshControl.backgroundColor = UIColor.lightGrayColor()
+        refreshControl.tintColor = UIColor.blueColor()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(ViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
+        timeTable.addSubview(refreshControl)
+        
         //inizializziamo la nostra variabile e la identidichiamo tramite “Secondo”
         vc = self.storyboard?.instantiateViewControllerWithIdentifier("Second") as? SettingsViewController
 
@@ -95,13 +101,18 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
             print("Hai Timbrato Uscita = \(value)")
             zucchetti.exit()
         } else {
-            print("--Refresh--")
-            zucchetti.loadAccessLog()
+            reloadData()
         }
         return sliderPosition
     }
 
+    func reloadData(){
+        print("--Refresh--")
+        zucchetti.loadAccessLog()
+    }
+    
     func loadComplete(data: NSData) {
+        refreshControl.endRefreshing()
         let parser = ZucchettiParser()
         parser.parse(data)
         let oreTot = parser.getOreTotali()
