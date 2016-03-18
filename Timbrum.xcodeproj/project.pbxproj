@@ -16,7 +16,6 @@
 		1B9172751C7CDC91000838FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9172731C7CDC91000838FD /* Main.storyboard */; };
 		1B9172771C7CDC91000838FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9172761C7CDC91000838FD /* Assets.xcassets */; };
 		1B91727A1C7CDC91000838FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9172781C7CDC91000838FD /* LaunchScreen.storyboard */; };
-		1B9172851C7CDC91000838FD /* TimbrumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9172841C7CDC91000838FD /* TimbrumTests.swift */; };
 		1B9172901C7CDC91000838FD /* TimbrumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91728F1C7CDC91000838FD /* TimbrumUITests.swift */; };
 		1BBF55781C90071C0012971E /* TimeCounterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF55771C90071C0012971E /* TimeCounterTest.swift */; };
 		1BDE8F511C88D975008CD4A9 /* ZucchettiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE8F501C88D975008CD4A9 /* ZucchettiParser.swift */; };
@@ -64,7 +63,6 @@
 		1B9172791C7CDC91000838FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B91727B1C7CDC91000838FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B9172801C7CDC91000838FD /* TimbrumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimbrumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B9172841C7CDC91000838FD /* TimbrumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimbrumTests.swift; sourceTree = "<group>"; };
 		1B9172861C7CDC91000838FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B91728B1C7CDC91000838FD /* TimbrumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimbrumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B91728F1C7CDC91000838FD /* TimbrumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimbrumUITests.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 		1B9172831C7CDC91000838FD /* TimbrumTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B9172841C7CDC91000838FD /* TimbrumTests.swift */,
 				1BE12BAB1C7ED9F300415344 /* ZucchettiTests.swift */,
 				1BDE8F521C88DBDB008CD4A9 /* ZucchettiParserTest.swift */,
 				1B9172861C7CDC91000838FD /* Info.plist */,
@@ -351,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9172851C7CDC91000838FD /* TimbrumTests.swift in Sources */,
 				1BE12BAC1C7ED9F300415344 /* ZucchettiTests.swift in Sources */,
 				1BDE8F531C88DBDB008CD4A9 /* ZucchettiParserTest.swift in Sources */,
 				1BBF55781C90071C0012971E /* TimeCounterTest.swift in Sources */,

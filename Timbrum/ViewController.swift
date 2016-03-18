@@ -96,9 +96,10 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         tmpParser.uscita(ORE_LAVORATIVE)
         values[0] = oreTot
         values[1] = tmpParser.getOreTotali()
-        timeTable.reloadData()
-        timeTable.setNeedsDisplay()
-        timeTable.setNeedsLayout()
+
+        dispatch_async(dispatch_get_main_queue(),{
+            self.timeTable.reloadData()
+        });
     }
 
     @IBAction func cambiaView(sender: AnyObject) {
