@@ -10,31 +10,29 @@ import UIKit
 
 class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var timeTable: UITableView!
-    
     @IBOutlet weak var uscita: UIButton!
     @IBOutlet weak var entrata: UIButton!
-    
+
     let defValues = NSUserDefaults.standardUserDefaults()
-
-    var zucchetti = ZucchettiController()
-
     let ENTRATA: NSNumber = 1.0
     let USCITA: NSNumber = 0.0
     let ORE_LAVORATIVE = "08:00"
+    let refreshControl = UIRefreshControl()
+
+    var zucchetti = ZucchettiController()
     var vc: SettingsViewController?
     var items: [Int:String] = [0: "Ore Lavorate Oggi:", 1: "Ore Residue Oggi:", 2: "Ora uscita:"]
     var values: [Int:String] = [0: "00:00", 1: "08:00", 2: "00:00"]
-    let refreshControl = UIRefreshControl()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         refreshControl.backgroundColor = UIColor.lightGrayColor()
         refreshControl.tintColor = UIColor.blueColor()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(ViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
         timeTable.addSubview(refreshControl)
-        
+
         //inizializziamo la nostra variabile e la identidichiamo tramite “Secondo”
         vc = self.storyboard?.instantiateViewControllerWithIdentifier("Second") as? SettingsViewController
 
@@ -45,9 +43,32 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         connectToServer()
     }
 
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func logButtonEvent(sender: UIButton) {
+        let timbratura = sender.currentTitle!
+        print("press button = \(timbratura)")
+
+        switch timbratura {
+        case "entrata": zucchetti.enter()
+        case "uscita": zucchetti.exit()
+
+        default: break
+        }
+        zucchetti.loadAccessLog()
+    }
+
+    @IBAction func cambiaView(sender: AnyObject) {
+        //il metodo presentViewController ci consente di passare all’altra vista
+        self.presentViewController(vc!, animated: true, completion: nil)
+    }
+
     func connectToServer() {
         // recuperiamo i valori di default dalle impostazioni
-
         let serverName = defValues.stringForKey("zucchettiServer")
         print("SERVER :\(serverName)")
 
@@ -60,32 +81,13 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         if (serverName != nil && userName != nil && userPswd != nil) {
             zucchetti.connect(serverName!, usr_name: userName!, user_pswd: userPswd!)
         }
-
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func logButtonEvent(sender: UIButton) {
-        let timbratura = sender.currentTitle!
-        print("press button = \(timbratura)")
-        
-        switch timbratura {
-            case "entrata": zucchetti.enter()
-            case "uscita": zucchetti.exit()
-            
-            default: break
-        }
-        zucchetti.loadAccessLog()
-    }
-
-    func reloadData(){
+    func reloadData() {
         print("--Refresh--")
         zucchetti.loadAccessLog()
     }
-    
+
     func loadComplete(data: NSData) {
         refreshControl.endRefreshing()
         let parser = ZucchettiParser()
@@ -96,6 +98,13 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         tmpParser.uscita(ORE_LAVORATIVE)
         values[0] = oreTot
         values[1] = tmpParser.getOreTotali()
+        addEnterExitToTimeTalbe(parser)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.timeTable.reloadData()
+        });
+    }
+
+    func addEnterExitToTimeTalbe(parser: ZucchettiParser) {
         let sortedTimeTable = parser.getTimeTable().sort {
             (map0, map1) -> Bool in
             let firstTime = getTimeInterval(map0.0)
@@ -103,19 +112,11 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
             return firstTime.distanceTo(secondTime) > 0
         }
         for (time, operation) in sortedTimeTable {
-            if(!items.values.contains(time)){
-                items[items.count]=time
-                values[values.count]=operation
+            if (!items.values.contains(time)) {
+                items[items.count] = time
+                values[values.count] = operation
             }
         }
-        dispatch_async(dispatch_get_main_queue(),{
-            self.timeTable.reloadData()
-        });
-    }
-
-    @IBAction func cambiaView(sender: AnyObject) {
-        //il metodo presentViewController ci consente di passare all’altra vista
-        self.presentViewController(vc!, animated: true, completion: nil)
     }
 
     func getTimeInterval(tempo: String) -> NSTimeInterval {
