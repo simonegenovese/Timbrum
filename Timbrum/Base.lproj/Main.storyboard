@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timbum" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="4" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pq-LC-074">
+                            <label autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timbrum" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="4" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pq-LC-074">
                                 <rect key="frame" x="248" y="28" width="109" height="34"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -62,16 +62,21 @@
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZI-Lo-IRH">
-                                <rect key="frame" x="25" y="521" width="555" height="44"/>
+                                <rect key="frame" x="23" y="512" width="555" height="44"/>
                                 <color key="backgroundColor" red="0.91579718053619574" green="1" blue="0.95038356827378101" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem title="Parametri" id="pUD-Ei-uIJ">
-                                        <inset key="imageInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                    <barButtonItem image="profil.png" id="Y4o-ci-Xne">
+                                        <inset key="imageInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iax-kD-b1J"/>
+                                    <barButtonItem title="Giustificativi" id="Okj-JR-Bsq"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RKf-Yg-49M"/>
+                                    <barButtonItem image="configura.png" id="pUD-Ei-uIJ">
+                                        <inset key="imageInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
                                         <connections>
                                             <action selector="cambiaView:" destination="BYZ-38-t0r" id="nPa-GJ-fZg"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Giustificativi" id="Okj-JR-Bsq"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -83,10 +88,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fhc-SF-rko" secondAttribute="bottom" constant="70" id="Co8-UT-Kvz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4pq-LC-074" secondAttribute="trailing" constant="223" id="GUL-Ml-9I2"/>
                             <constraint firstItem="fhc-SF-rko" firstAttribute="height" secondItem="Aen-dA-72i" secondAttribute="height" id="HG7-Op-DXD"/>
-                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="Iga-Xs-PlO"/>
+                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="Iga-Xs-PlO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Aen-dA-72i" secondAttribute="leading" id="M62-v6-vgm"/>
-                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="35" id="STq-ph-E4H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QZI-Lo-IRH" secondAttribute="trailing" id="Shu-xq-Jeh"/>
+                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="26" id="STq-ph-E4H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QZI-Lo-IRH" secondAttribute="trailing" constant="2" id="Shu-xq-Jeh"/>
                             <constraint firstItem="4pq-LC-074" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WDp-vi-9Wf"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="4pq-LC-074" secondAttribute="bottom" constant="8" id="Xhf-cm-uVr"/>
                             <constraint firstItem="4pq-LC-074" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="228" id="cNC-he-vmE"/>
@@ -101,8 +106,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aen-dA-72i" secondAttribute="bottom" constant="70" id="ks8-sd-fUG"/>
                             <constraint firstItem="Aen-dA-72i" firstAttribute="width" secondItem="fhc-SF-rko" secondAttribute="width" id="n9r-KV-s13"/>
                             <constraint firstAttribute="leadingMargin" secondItem="byj-4g-ZW5" secondAttribute="leading" id="nGX-3y-2gq"/>
-                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="top" secondItem="fhc-SF-rko" secondAttribute="bottom" constant="35" id="rS3-wu-CVM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QZI-Lo-IRH" secondAttribute="bottom" constant="-9" id="sj6-La-qOH"/>
+                            <constraint firstItem="QZI-Lo-IRH" firstAttribute="top" secondItem="fhc-SF-rko" secondAttribute="bottom" constant="26" id="rS3-wu-CVM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QZI-Lo-IRH" secondAttribute="bottom" id="sj6-La-qOH"/>
                             <constraint firstItem="byj-4g-ZW5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="usf-UQ-wJc"/>
                         </constraints>
                         <variation key="default">
@@ -145,13 +150,7 @@
                                     <color key="textColor" red="0.20148000960000001" green="0.63054281909999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Configurazione" id="ftg-ID-IA9">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="2PB-Zu-8DF">
-                                            <connections>
-                                                <action selector="indietro:" destination="ORo-Kt-kgf" id="kVY-yY-paf"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Configurazione" id="ftg-ID-IA9"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW1-bu-sVe">
@@ -190,7 +189,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNK-RH-xGv">
+                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNK-RH-xGv">
                                 <rect key="frame" x="265" y="372" width="72" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Save"/>
@@ -198,6 +197,27 @@
                                     <action selector="saveSettings:" destination="ORo-Kt-kgf" eventType="touchUpInside" id="L1s-bP-jl8"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV4-W1-Ztw">
+                                <rect key="frame" x="23" y="548" width="557" height="44"/>
+                                <color key="backgroundColor" red="0.91579718050000003" green="1" blue="0.95038356830000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem image="profil.png" id="zyj-3c-PaS">
+                                        <inset key="imageInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="indietro:" destination="ORo-Kt-kgf" id="cp0-Ht-68G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="psX-0j-bWO"/>
+                                    <barButtonItem title="Giustificativi" id="wkZ-um-GLt"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vFz-jh-Wuf"/>
+                                    <barButtonItem image="configura.png" id="A4D-kQ-5Nl">
+                                        <inset key="imageInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="cambiaView:" destination="BYZ-38-t0r" id="7bt-fr-uvE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -206,15 +226,21 @@
                             <constraint firstAttribute="leadingMargin" secondItem="UW1-bu-sVe" secondAttribute="leading" id="1yS-Dm-Eqg"/>
                             <constraint firstItem="OTs-Ut-lpW" firstAttribute="trailing" secondItem="r0Y-KB-Wb3" secondAttribute="trailing" id="32M-Is-D2n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1H8-B3-xeJ" secondAttribute="trailing" constant="39" id="5ON-T3-Qx5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gV4-W1-Ztw" secondAttribute="trailing" id="9hv-e8-nbS"/>
                             <constraint firstItem="UW1-bu-sVe" firstAttribute="top" secondItem="d60-zY-Myt" secondAttribute="bottom" constant="103" id="ALc-4o-NHD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="OTs-Ut-lpW" secondAttribute="leading" id="CkC-ev-TJu"/>
                             <constraint firstItem="AcC-OA-uAy" firstAttribute="leading" secondItem="OTs-Ut-lpW" secondAttribute="trailing" constant="61" id="EsV-Pv-fh6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AcC-OA-uAy" secondAttribute="trailing" constant="39" id="IWW-hU-3V4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QNK-RH-xGv" secondAttribute="trailing" constant="243" id="JJG-cB-cRa"/>
+                            <constraint firstItem="QNK-RH-xGv" firstAttribute="leading" secondItem="sbq-KX-xDh" secondAttribute="leadingMargin" constant="245" id="Jay-YU-5Wf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HAk-gZ-QFN" secondAttribute="trailing" constant="39" id="Mqh-nt-aMV"/>
                             <constraint firstItem="1H8-B3-xeJ" firstAttribute="centerY" secondItem="r0Y-KB-Wb3" secondAttribute="centerY" id="Tqg-fO-uPR"/>
+                            <constraint firstItem="gV4-W1-Ztw" firstAttribute="leading" secondItem="sbq-KX-xDh" secondAttribute="leadingMargin" constant="3" id="UDp-sp-MRF"/>
+                            <constraint firstItem="hEM-44-1Sw" firstAttribute="top" secondItem="QNK-RH-xGv" secondAttribute="bottom" constant="167" id="WYj-Oc-4vq"/>
                             <constraint firstItem="OTs-Ut-lpW" firstAttribute="centerY" secondItem="AcC-OA-uAy" secondAttribute="centerY" id="Z9J-Yj-AaU"/>
                             <constraint firstItem="OTs-Ut-lpW" firstAttribute="top" secondItem="r0Y-KB-Wb3" secondAttribute="bottom" constant="42" id="c1N-HS-cWC"/>
                             <constraint firstItem="HAk-gZ-QFN" firstAttribute="top" secondItem="d60-zY-Myt" secondAttribute="bottom" constant="103" id="cyy-xq-pCr"/>
+                            <constraint firstItem="hEM-44-1Sw" firstAttribute="top" secondItem="gV4-W1-Ztw" secondAttribute="bottom" constant="37" id="ifr-aK-f9d"/>
                             <constraint firstItem="OTs-Ut-lpW" firstAttribute="trailing" secondItem="UW1-bu-sVe" secondAttribute="trailing" id="n9F-8J-zvq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="r0Y-KB-Wb3" secondAttribute="leading" id="qmO-Ub-08V"/>
                             <constraint firstItem="1H8-B3-xeJ" firstAttribute="leading" secondItem="HAk-gZ-QFN" secondAttribute="leading" id="yZb-iA-9gd"/>
@@ -232,7 +258,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="configura.png" width="24" height="24"/>
         <image name="enter32.png" width="32" height="32"/>
         <image name="exit32.png" width="32" height="32"/>
+        <image name="profil.png" width="24" height="24"/>
     </resources>
 </document>
