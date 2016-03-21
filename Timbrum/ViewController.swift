@@ -27,7 +27,7 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        refreshControl.backgroundColor = UIColor.lightGrayColor()
+        refreshControl.backgroundColor = UIColor.whiteColor()
         refreshControl.tintColor = UIColor.blueColor()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(ViewController.reloadData), forControlEvents: UIControlEvents.ValueChanged)
@@ -53,6 +53,7 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         let timbratura = sender.currentTitle!
         print("press button = \(timbratura)")
 
+        //TODO occorrerebbe verificare se siamo già nello stato voluto: es premo uscita ma sono già uscito...
         switch timbratura {
         case "entrata": zucchetti.enter()
         case "uscita": zucchetti.exit()
@@ -60,6 +61,7 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
         default: break
         }
         zucchetti.loadAccessLog()
+        self.timeTable.reloadData()
     }
 
     @IBAction func cambiaView(sender: AnyObject) {
@@ -136,7 +138,22 @@ class ViewController: UIViewController, ZucchettiListener, UITableViewDelegate, 
 
         cell.textLabel?.text = self.items[indexPath.row]! + " " + self.values[indexPath.row]!
         cell.detailTextLabel?.text = "More text";
-        cell.imageView!.image = UIImage(named: "gear.png")
+
+        var cellLabel:String = "";
+        cellLabel = (cell.textLabel?.text)!
+
+//        cambiare icona in base all'azione!
+//        cell.imageView!.image = UIImage(named: "gear.png")
+        
+        let ultimoCar:String = (cellLabel.substringFromIndex(cellLabel.endIndex.predecessor()))
+        if(ultimoCar == "E") {
+            cell.imageView!.image = UIImage(named: "enter32.png")
+        } else if(ultimoCar == "U"){
+            cell.imageView!.image = UIImage(named: "exit32.png")
+        } else {
+            cell.imageView!.image = UIImage(named: "gear.png")
+        }
+
         return cell
     }
 

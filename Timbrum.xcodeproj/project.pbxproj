@@ -28,6 +28,7 @@
 		8B0C55F51C9B56700057E8B6 /* configura.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C55F41C9B56700057E8B6 /* configura.png */; };
 		8B0C55F71C9B567B0057E8B6 /* profil.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C55F61C9B567A0057E8B6 /* profil.png */; };
 		8B2038F91C8D6A74000B413F /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2038F81C8D6A74000B413F /* gear.png */; };
+		8B4DA0441CA009D5000D9546 /* presenze24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DA0431CA009D5000D9546 /* presenze24.png */; };
 		8B6A828A1C945868004ED4FC /* logoTimbrum.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6A82891C945868004ED4FC /* logoTimbrum.png */; };
 		8B6A828C1C945BE5004ED4FC /* logoTimbrum.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8B6A828B1C945BE5004ED4FC /* logoTimbrum.icns */; };
 		8B6A828E1C9465CD004ED4FC /* logoTimbrum57.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6A828D1C9465CD004ED4FC /* logoTimbrum57.png */; };
@@ -78,6 +79,7 @@
 		8B0C55F41C9B56700057E8B6 /* configura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = configura.png; sourceTree = "<group>"; };
 		8B0C55F61C9B567A0057E8B6 /* profil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profil.png; sourceTree = "<group>"; };
 		8B2038F81C8D6A74000B413F /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		8B4DA0431CA009D5000D9546 /* presenze24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presenze24.png; sourceTree = "<group>"; };
 		8B6A82891C945868004ED4FC /* logoTimbrum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTimbrum.png; sourceTree = "<group>"; };
 		8B6A828B1C945BE5004ED4FC /* logoTimbrum.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = logoTimbrum.icns; sourceTree = "<group>"; };
 		8B6A828D1C9465CD004ED4FC /* logoTimbrum57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTimbrum57.png; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		1B91729D1C7CDCD6000838FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8B4DA0431CA009D5000D9546 /* presenze24.png */,
 				8B0C55F61C9B567A0057E8B6 /* profil.png */,
 				8B0C55F41C9B56700057E8B6 /* configura.png */,
 				8B6A828B1C945BE5004ED4FC /* logoTimbrum.icns */,
@@ -306,6 +309,7 @@
 				1B9172751C7CDC91000838FD /* Main.storyboard in Resources */,
 				1B0D212B1C7D8AA800EB1CB3 /* enter32.png in Resources */,
 				1B0D212C1C7D8AA800EB1CB3 /* exit32.png in Resources */,
+				8B4DA0441CA009D5000D9546 /* presenze24.png in Resources */,
 				8B0C55F71C9B567B0057E8B6 /* profil.png in Resources */,
 				1BFC973C1C91559E00F5A9F7 /* Settings.bundle in Resources */,
 				8B6A828E1C9465CD004ED4FC /* logoTimbrum57.png in Resources */,
